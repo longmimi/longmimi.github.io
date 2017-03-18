@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>LongTean Share</title>
-  <subtitle>一步一个脚印</subtitle>
+  <title>LongTean</title>
+  
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://longmimi.github.io/"/>
   <updated>2017-03-10T14:57:36.247Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://longmimi.github.io/</id>
   
   <author>
     <name>LongTean</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/03/10/hello-world/"/>
-    <id>http://yoursite.com/2017/03/10/hello-world/</id>
+    <link href="http://longmimi.github.io/2017/03/10/hello-world/"/>
+    <id>http://longmimi.github.io/2017/03/10/hello-world/</id>
     <published>2017-03-10T14:57:36.208Z</published>
     <updated>2017-03-10T14:57:36.247Z</updated>
     
