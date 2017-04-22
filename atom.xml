@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-04-22T17:13:10.110Z</updated>
+  <updated>2017-04-22T17:26:21.423Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,14 +20,13 @@
     <link href="http://longmimi.github.io/2017/04/23/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://longmimi.github.io/2017/04/23/jQuery学习笔记/</id>
     <published>2017-04-22T17:10:59.000Z</published>
-    <updated>2017-04-22T17:13:10.110Z</updated>
+    <updated>2017-04-22T17:26:21.423Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过<a href="http://www.w3cschool.cn/jquery/" target="_blank" rel="external">w3school</a>学习。</p>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过<a href="http://www.w3cschool.cn/jquery/" target="_blank" rel="external">w3school</a>学习。</p>
 <hr>
-<a id="more"></a>
 <h2 id="课程章结"><a href="#课程章结" class="headerlink" title="课程章结"></a>课程章结</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><p><strong>关键词</strong>：<strong>简介</strong>、<strong>安装</strong>、<strong>语法</strong>、<strong>选择器</strong>、<strong>事件</strong>、<strong>名称冲突</strong></p>
 <ul>
-<li>简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do more”,也就是一个轻量级的”写的少，做的多”的JavaScript库。</li>
+<li>简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do more”,也就是一个轻量级的”写的少，做的多”的JavaScript库。<a id="more"></a></li>
 <li><p>安装：    </p>
 <ul>
 <li>下载<a href="http://jquery.com/download/" target="_blank" rel="external">jQuery</a>到本地，从本地载入</li>
@@ -257,8 +256,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过&lt;a href=&quot;http://www.w3cschool.cn/jquery/&quot;&gt;w3school&lt;/a&gt;学习。&lt;/p&gt;
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过&lt;a href=&quot;http://www.w3cschool.cn/jquery/&quot;&gt;w3school&lt;/a&gt;学习。&lt;/p&gt;
 &lt;hr&gt;
+&lt;h2 id=&quot;课程章结&quot;&gt;&lt;a href=&quot;#课程章结&quot; class=&quot;headerlink&quot; title=&quot;课程章结&quot;&gt;&lt;/a&gt;课程章结&lt;/h2&gt;&lt;h3 id=&quot;jQuery介绍&quot;&gt;&lt;a href=&quot;#jQuery介绍&quot; class=&quot;headerlink&quot; title=&quot;jQuery介绍&quot;&gt;&lt;/a&gt;jQuery介绍&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt;：&lt;strong&gt;简介&lt;/strong&gt;、&lt;strong&gt;安装&lt;/strong&gt;、&lt;strong&gt;语法&lt;/strong&gt;、&lt;strong&gt;选择器&lt;/strong&gt;、&lt;strong&gt;事件&lt;/strong&gt;、&lt;strong&gt;名称冲突&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do more”,也就是一个轻量级的”写的少，做的多”的JavaScript库。
     
     </summary>
     
