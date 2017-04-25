@@ -1699,7 +1699,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #beb9b8;
+  background: #8718d5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2865,4 +2865,8 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+.links-of-blogroll-item {
+  list-style: none;
+  text-align: center;
 }
