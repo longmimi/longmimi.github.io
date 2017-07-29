@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-07-29T14:34:44.512Z</updated>
+  <updated>2017-07-29T14:46:58.400Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://longmimi.github.io/2017/07/28/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E5%8F%8Aflex%E5%B8%83%E5%B1%80/"/>
     <id>http://longmimi.github.io/2017/07/28/水平垂直居中及flex布局/</id>
     <published>2017-07-28T14:31:13.000Z</published>
-    <updated>2017-07-29T14:34:44.512Z</updated>
+    <updated>2017-07-29T14:46:58.400Z</updated>
     
     <content type="html"><![CDATA[<h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><blockquote>
 <p>如果要实现水平居中，严格来说满足以下条件才能称为水平居中：①父元素必须是块级盒子容器②父元素宽度必须已经被设定好</p>
@@ -62,10 +62,9 @@
 </li>
 </ul>
 </li>
-<li><p>最后一个思维导图总结</p>
+<li><p>最后一个思维导图总结<br><img src="/2017/07/28/水平垂直居中及flex布局/flex.jpg" alt="&quot;flex&quot;"></p>
 </li>
 </ul>
-<p><img src="/2017/07/28/水平垂直居中及flex布局/flex.png" alt="&quot;flex&quot;"></p>
 ]]></content>
     
     <summary type="html">
