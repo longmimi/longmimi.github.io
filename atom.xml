@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-07-31T03:04:44.627Z</updated>
+  <updated>2017-08-11T03:52:28.549Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -16,11 +16,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vue2父子组件通信</title>
+    <link href="http://longmimi.github.io/2017/08/11/vue2%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    <id>http://longmimi.github.io/2017/08/11/vue2父子组件通信/</id>
+    <published>2017-08-11T03:49:41.000Z</published>
+    <updated>2017-08-11T03:52:28.549Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>最近在学习vue2，这是我写的父子组件通信的简单小例子<br><a id="more"></a></p>
+<ul>
+<li>子组件向父组件发送数据：  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是父组件，我从子组件获取来的数据:&#123;&#123;sonWords&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">com1</span> <span class="attr">v-on:son-send-to-me</span>=<span class="string">"listenMySon"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">com1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"> &lt;script&gt;</div><div class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">     <span class="attr">el</span>:<span class="string">'#box'</span>,</div><div class="line">     <span class="attr">data</span>:&#123;</div><div class="line">         <span class="attr">sonWords</span>:<span class="string">''</span></div><div class="line">     &#125;,  </div><div class="line"> <span class="attr">components</span>:&#123;</div><div class="line">     <span class="attr">com1</span>:&#123;</div><div class="line">         <span class="attr">data</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> data = &#123;</div><div class="line">             <span class="attr">msg</span>:<span class="string">"我是子组件的数据啊"</span></div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> data</div><div class="line">         &#125;,</div><div class="line">         <span class="attr">template</span>:<span class="string">'&lt;div&gt;&lt;button  @click="click"&gt;点击我向父组件发送数据&lt;/button&gt;&lt;/div&gt;'</span>,           </div><div class="line">         <span class="attr">methods</span>:&#123;</div><div class="line">           click()&#123;</div><div class="line">             <span class="keyword">this</span>.$emit(<span class="string">'son-send-to-me'</span>,<span class="keyword">this</span>.msg);</div><div class="line">           &#125;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line"> &#125;,</div><div class="line"> <span class="attr">methods</span>:&#123;</div><div class="line">     <span class="attr">listenMySon</span>:<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</div><div class="line">       <span class="keyword">this</span>.sonWords = msg;</div><div class="line">     &#125;        </div><div class="line"> &#125;</div><div class="line">&#125;)    </div><div class="line"> &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+</code></pre><ul>
+<li>父组件向子组件发送数据：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span></div><div class="line">   请输入你要传给子组件的数据： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"inputmsg"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">com1</span> <span class="attr">v-bind:my-message</span>=<span class="string">"message"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">com1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">el</span>:<span class="string">'#box'</span>,</div><div class="line">    <span class="attr">data</span>:&#123;</div><div class="line">      <span class="attr">message</span>:<span class="string">''</span>,</div><div class="line">      <span class="attr">inputmsg</span>:<span class="string">''</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">components</span>:&#123;</div><div class="line">        <span class="attr">com1</span>:&#123;</div><div class="line">            <span class="attr">data</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">               <span class="keyword">var</span> data = &#123;</div><div class="line">                <span class="attr">messageSon</span>:<span class="string">"这是组件的data，他必须是一个函数"</span></div><div class="line">               &#125;</div><div class="line">               <span class="keyword">return</span> data</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">template</span>:<span class="string">'&lt;div &gt;&lt;h1&gt;我是子组件的模板 这是我从父组件获取来的数据:&#123;&#123;myMessage&#125;&#125;&lt;/h1&gt;&lt;button @click="btn"&gt;点击我获取父组件的数据&lt;/button&gt;&lt;/div&gt;'</span> ,        </div><div class="line">            <span class="attr">props</span>:&#123;</div><div class="line">                    <span class="attr">myMessage</span>: <span class="built_in">String</span> <span class="comment">//这样可以指定传入的类型，如果类型不对，会警告</span></div><div class="line">                  &#125;,</div><div class="line">            <span class="attr">methods</span>:&#123;</div><div class="line">              btn()&#123;</div><div class="line">               vm.message = vm.inputmsg</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">   &#125;)    </div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;最近在学习vue2，这是我写的父子组件通信的简单小例子&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://longmimi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记 vue" scheme="http://longmimi.github.io/tags/%E7%AC%94%E8%AE%B0-vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>水平垂直居中及flex布局</title>
     <link href="http://longmimi.github.io/2017/07/28/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E5%8F%8Aflex%E5%B8%83%E5%B1%80/"/>
     <id>http://longmimi.github.io/2017/07/28/水平垂直居中及flex布局/</id>
     <published>2017-07-28T14:31:13.000Z</published>
-    <updated>2017-07-31T03:04:44.627Z</updated>
+    <updated>2017-07-31T08:50:47.306Z</updated>
     
     <content type="html"><![CDATA[<h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><blockquote>
 <p>如果要实现水平居中，严格来说满足以下条件才能称为水平居中：①父元素必须是块级盒子容器②父元素宽度必须已经被设定好</p>
