@@ -69,7 +69,7 @@
     <link href="http://longmimi.github.io/2017/07/28/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E5%8F%8Aflex%E5%B8%83%E5%B1%80/"/>
     <id>http://longmimi.github.io/2017/07/28/水平垂直居中及flex布局/</id>
     <published>2017-07-28T14:31:13.000Z</published>
-    <updated>2017-09-19T06:21:53.676Z</updated>
+    <updated>2017-09-19T06:53:55.927Z</updated>
     
     <content type="html"><![CDATA[<h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><blockquote>
 <p>如果要实现水平居中，严格来说满足以下条件才能称为水平居中：①父元素必须是块级盒子容器②父元素宽度必须已经被设定好</p>
@@ -142,7 +142,7 @@
 </li>
 </ul>
 </li>
-<li><p>最后一个思维导图总结<br><img src="/image/flex.jpg" alt="&quot;flex&quot;"></p>
+<li><p>最后一个思维导图总结<br><img src="/images/flex.jpg" alt="&quot;flex&quot;"></p>
 </li>
 </ul>
 ]]></content>
@@ -159,11 +159,11 @@
       <category term="笔记" scheme="http://longmimi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
+      <category term="笔记" scheme="http://longmimi.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
       <category term="flex" scheme="http://longmimi.github.io/tags/flex/"/>
     
       <category term="居中" scheme="http://longmimi.github.io/tags/%E5%B1%85%E4%B8%AD/"/>
-    
-      <category term="笔记" scheme="http://longmimi.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
