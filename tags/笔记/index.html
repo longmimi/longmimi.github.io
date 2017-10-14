@@ -118,6 +118,75 @@
       
       
         
+      
+        
+      
+        
+          
+        
+      
+      
+      <div class="post-title-item">
+  
+  <a href="/2017/07/28/水平垂直居中及flex布局/">
+  
+    水平垂直居中及flex布局
+  
+  </a>
+  <p class="page-title-sub">
+    <span id = "post-title-date">7-28</span>
+    
+    <span id = "post-title-categories">分类
+    
+    
+      
+      
+      <a href="/categories/笔记/">笔记</a>
+    
+    </span>
+    
+    
+    <span id = "post-title-tags">
+    标签
+    
+    
+      
+      
+      <a href="/tags/flex/">flex</a>
+    
+      
+        /
+      
+      
+      <a href="/tags/居中/">居中</a>
+    
+      
+        /
+      
+      
+      <a href="/tags/笔记/">笔记</a>
+    
+    </span>
+    
+    
+      <br>
+      
+      
+    
+  </p>
+  
+</div>
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
           
         
       
@@ -157,75 +226,6 @@
       
       
       <a href="/tags/vue/">vue</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
-      
-      
-        
-      
-      
-    
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2017/07/28/水平垂直居中及flex布局/">
-  
-    水平垂直居中及flex布局
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">7-28</span>
-    
-    <span id = "post-title-categories">分类
-    
-    
-      
-      
-      <a href="/categories/笔记/">笔记</a>
-    
-    </span>
-    
-    
-    <span id = "post-title-tags">
-    标签
-    
-    
-      
-      
-      <a href="/tags/笔记/">笔记</a>
-    
-      
-        /
-      
-      
-      <a href="/tags/flex/">flex</a>
-    
-      
-        /
-      
-      
-      <a href="/tags/居中/">居中</a>
     
     </span>
     
@@ -401,6 +401,10 @@ var isTriggerAnalytics = !( true && isIgnoreHost );
   // fancybox
   var backgroundImages = [];
   
+    
+      backgroundImages.push('http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/60/9/thumb.jpg');
+    
+  
   $('#post').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
@@ -414,7 +418,7 @@ var isTriggerAnalytics = !( true && isIgnoreHost );
   });
   $(".fancybox").fancybox();
 
-var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
+var vegasConfig = {"preload­Image":true,"transition":["flash"],"timer":true,"delay":1000,"shuffle":true,"count":28};
 var unsplashConfig = {"gravity":"north"};
 // is show background images
 var turnoffBackgroundImage = false;
