@@ -1,9 +1,11 @@
 body {
-  background-color: #34495e;
+  background-color: #fff;
+!important
   margin: 0px;
   font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-size: 18px;
 }
+!important
 @media (max-width: 860px) {
   body {
     font-size: 16px;
@@ -44,11 +46,12 @@ a:hover {
 #menu-outer,
 #container {
   background-color: #fff;
+  opacity: 0.8;
 }
 #menu-outer,
 #bottom-outer,
 #random-index {
-  opacity: 0.85;
+  opacity: 0.8;
 }
 .random-center {
   position: absolute;
@@ -143,17 +146,17 @@ a:hover {
   line-height: 50px;
   height: 49px;
   border-bottom: 1px solid #ddd;
-  padding: 0px 10px 0 10px;
-  width: 940px;
+  padding: 0px 25px 0 25px;
+  width: 910px;
 }
 @media (max-width: 960px) {
   #menu-inner {
-    width: 840px;
+    width: 810px;
   }
 }
 @media (max-width: 860px) {
   #menu-inner {
-    width: 740px;
+    width: 710px;
   }
 }
 #menu-inner .left {
@@ -214,7 +217,7 @@ a:hover {
 #bottom-outer {
   color: #888;
   text-align: center;
-  padding: 10px;
+  padding: 25px;
   padding-top: 40px;
   background-color: #fff;
   font-size: 14px;
@@ -228,7 +231,7 @@ a:hover {
   margin-top: 50px;
 }
 #content-outer {
-  padding: 10px;
+  padding: 25px;
 }
 .tag-cloud-tags {
   text-align: center;
@@ -331,16 +334,16 @@ ul.category-list li a:hover {
   margin-right: 5px;
 }
 article img {
-  max-width: 940px;
+  max-width: 910px;
 }
 @media (max-width: 960px) {
   article img {
-    max-width: 840px;
+    max-width: 810px;
   }
 }
 @media (max-width: 860px) {
   article img {
-    max-width: 740px;
+    max-width: 710px;
   }
 }
 #user-card {
@@ -534,7 +537,7 @@ article img {
 }
 .random-toc-area {
   position: fixed;
-  width: 200px;
+  width: 225px;
   right: 0px;
   top: 0px;
   display: block;
@@ -545,6 +548,7 @@ article img {
   }
 }
 .random-toc {
+  padding: 20px;
   background: #444;
   color: #bbb;
   height: 500px;
@@ -558,6 +562,7 @@ article img {
 }
 .random-toc h2 {
   text-align: center;
+  margin: 5px;
 }
 .random-toc a {
   color: #bbb;
@@ -642,7 +647,7 @@ blockquote {
     position: absolute;
     margin-top: 50px;
     background-color: #fff;
-    opacity: 0.85;
+    opacity: 0.8;
     width: 100%;
   }
   #menu-list ul {
@@ -670,10 +675,10 @@ blockquote {
   }
   #bottom-outer,
   #random-index {
-    opacity: 0.95;
+    opacity: 0.8;
   }
   #menu-outer {
-    opacity: 0.95;
+    opacity: 0.8;
   }
 }
 @media (max-height: 480px) {
