@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>LongTean</title>
+  <title>LongTean&#39;s blog</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-10-15T15:49:00.979Z</updated>
+  <updated>2017-10-16T07:16:57.463Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>图片懒加载</title>
+    <title>图片预加载</title>
     <link href="http://longmimi.github.io/2017/10/15/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
     <id>http://longmimi.github.io/2017/10/15/图片懒加载/</id>
     <published>2017-10-15T15:40:10.000Z</published>
-    <updated>2017-10-15T15:49:00.979Z</updated>
+    <updated>2017-10-16T07:16:57.463Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在慕课上学习了图片的预加载，写一篇博客总结一下，方便以后复习，并与后面的懒加载作对比。</p>
@@ -39,7 +39,7 @@
 <li><p>还可以通过js来实现预加载，这里打个小广告：这是一个<a href="https://github.com/longmimi/preloadImg" target="_blank" rel="external">预加载插件</a>，有兴趣的同学可以看看。  </p>
 </li>
 <li><p>这里再贴出网上的一些实现：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"hidden"</span>&gt;</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="xml"></span></span></div><div class="line">        <span class="comment">&lt;!--//--&gt;</span>&lt;![CDATA[//&gt;&lt;!--</div><div class="line">            var images = new Array()</div><div class="line">            function preload() &#123;</div><div class="line">                for (i = 0; i &lt; preload.arguments.length; i++) &#123;</div><div class="line">                    images[i] = new Image()</div><div class="line">                    images[i].src = preload.arguments[i]</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            preload(</div><div class="line">                ";,</div><div class="line">                ";,</div><div class="line">                ";</div><div class="line">            )</div><div class="line">        //--&gt;&lt;!]]&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"hidden"</span>&gt;</div><div class="line">    &lt;script type="text/javascript"&gt;</div><div class="line">        &lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--</div><div class="line">            var images = new Array()</div><div class="line">            function preload() &#123;</div><div class="line">                for (i = 0; i &lt; preload.arguments.length; i++) &#123;</div><div class="line">                    images[i] = new Image()</div><div class="line">                    images[i].src = preload.arguments[i]</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            preload(</div><div class="line">                ";,</div><div class="line">                ";,</div><div class="line">                ";</div><div class="line">            )</div><div class="line">        //--&gt;&lt;!]]&gt;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>还有就是通过ajax实现预加载，不仅可以加载图片，还可以预加载css，js等。比直接使用js的好处在于加载js和css不会影响到当前页面。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">        <span class="comment">// XHR to request a JS and a CSS  </span></div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();  </div><div class="line">        xhr.open(<span class="string">'GET'</span>, <span class="string">'http://domain.tld/preload.js'</span>);  </div><div class="line">        xhr.send(<span class="string">''</span>);  </div><div class="line">        xhr = <span class="keyword">new</span> XMLHttpRequest();  </div><div class="line">        xhr.open(<span class="string">'GET'</span>, <span class="string">'http://domain.tld/preload.css'</span>);  </div><div class="line">        xhr.send(<span class="string">''</span>);  </div><div class="line">        <span class="comment">// preload image  </span></div><div class="line">        <span class="keyword">new</span> Image().src = <span class="string">"http://domain.tld/preload.png"</span>;  </div><div class="line">    &#125;, <span class="number">1000</span>);  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
