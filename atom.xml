@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-10-15T15:42:00.427Z</updated>
+  <updated>2017-10-15T15:49:00.979Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://longmimi.github.io/2017/10/15/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
     <id>http://longmimi.github.io/2017/10/15/图片懒加载/</id>
     <published>2017-10-15T15:40:10.000Z</published>
-    <updated>2017-10-15T15:42:00.427Z</updated>
+    <updated>2017-10-15T15:49:00.979Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在慕课上学习了图片的预加载，写一篇博客总结一下，方便以后复习，并与后面的懒加载作对比。</p>
@@ -46,9 +46,8 @@
 </li>
 </ul>
 <p>上面代码预加载了“preload.js”、“preload.css”和“preload.png”。1000毫秒的延时是为了防止脚本挂起，而导致正常页面出现功能问题。</p>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><pre><code>* http://blog.csdn.net/sunshine940326/article/details/53536535?locationNum=3&amp;fps=1
-* http://www.cnblogs.com/haoyijing/p/5818236.html
-</code></pre>]]></content>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p>  <a href="http://blog.csdn.net/sunshine940326/article/details/53536535?locationNum=3&amp;fps=1" target="_blank" rel="external">参考一</a><br>  <a href="http://www.cnblogs.com/haoyijing/p/5818236.html" target="_blank" rel="external">参考二</a></p>
+]]></content>
     
     <summary type="html">
     
