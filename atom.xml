@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-10-16T07:16:57.463Z</updated>
+  <updated>2017-10-20T15:54:53.889Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一个知识点，准有你不知道的</title>
+    <link href="http://longmimi.github.io/2017/10/20/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AA%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%8C%E5%87%86%E6%9C%89%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84/"/>
+    <id>http://longmimi.github.io/2017/10/20/每天一个知识点，准有你不知道的/</id>
+    <published>2017-10-20T14:58:17.000Z</published>
+    <updated>2017-10-20T15:54:53.889Z</updated>
+    
+    <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。<br><a id="more"></a></p>
+<hr>
+<blockquote>
+<p>10.20</p>
+</blockquote>
+<ul>
+<li>关键词：锚点定位</li>
+<li>锚点是什么？张鑫旭大神说锚点就等同于火影中的“飞雷神之术”。水门把有特殊印记的苦无放在任何地方。他就可以在瞬间移动到那个地方，页面中来看，苦无就是我们设置的锚点，而锚链就是我们的术。<ul>
+<li>一般是用a标签的href属性=”#锚点”，而要跳转的地方给id=”锚点”</li>
+<li>如果是跳转到页面外的话，在网页链接后面加#锚点</li>
+<li>说到这里，h5中也有一个方法可以实现同样的效果，scrollIntoView(),这个以后再说  ：)</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://longmimi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="http://longmimi.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="知识点" scheme="http://longmimi.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>图片预加载</title>
@@ -39,7 +77,7 @@
 <li><p>还可以通过js来实现预加载，这里打个小广告：这是一个<a href="https://github.com/longmimi/preloadImg" target="_blank" rel="external">预加载插件</a>，有兴趣的同学可以看看。  </p>
 </li>
 <li><p>这里再贴出网上的一些实现：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"hidden"</span>&gt;</div><div class="line">    &lt;script type="text/javascript"&gt;</div><div class="line">        &lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--</div><div class="line">            var images = new Array()</div><div class="line">            function preload() &#123;</div><div class="line">                for (i = 0; i &lt; preload.arguments.length; i++) &#123;</div><div class="line">                    images[i] = new Image()</div><div class="line">                    images[i].src = preload.arguments[i]</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            preload(</div><div class="line">                ";,</div><div class="line">                ";,</div><div class="line">                ";</div><div class="line">            )</div><div class="line">        //--&gt;&lt;!]]&gt;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"hidden"</span>&gt;</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="xml"></span></span></div><div class="line">        <span class="comment">&lt;!--//--&gt;</span>&lt;![CDATA[//&gt;&lt;!--</div><div class="line">            var images = new Array()</div><div class="line">            function preload() &#123;</div><div class="line">                for (i = 0; i &lt; preload.arguments.length; i++) &#123;</div><div class="line">                    images[i] = new Image()</div><div class="line">                    images[i].src = preload.arguments[i]</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            preload(</div><div class="line">                ";,</div><div class="line">                ";,</div><div class="line">                ";</div><div class="line">            )</div><div class="line">        //--&gt;&lt;!]]&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>还有就是通过ajax实现预加载，不仅可以加载图片，还可以预加载css，js等。比直接使用js的好处在于加载js和css不会影响到当前页面。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">        <span class="comment">// XHR to request a JS and a CSS  </span></div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();  </div><div class="line">        xhr.open(<span class="string">'GET'</span>, <span class="string">'http://domain.tld/preload.js'</span>);  </div><div class="line">        xhr.send(<span class="string">''</span>);  </div><div class="line">        xhr = <span class="keyword">new</span> XMLHttpRequest();  </div><div class="line">        xhr.open(<span class="string">'GET'</span>, <span class="string">'http://domain.tld/preload.css'</span>);  </div><div class="line">        xhr.send(<span class="string">''</span>);  </div><div class="line">        <span class="comment">// preload image  </span></div><div class="line">        <span class="keyword">new</span> Image().src = <span class="string">"http://domain.tld/preload.png"</span>;  </div><div class="line">    &#125;, <span class="number">1000</span>);  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
