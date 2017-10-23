@@ -104,14 +104,16 @@
 
 <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每天一个知识点，万一有你不知道的">
+<meta property="og:title" content="每天一个知识点">
 <meta property="og:url" content="http://longmimi.github.io/2017/10/20/每天一个知识点，准有你不知道的/index.html">
 <meta property="og:site_name" content="LongTean's blog">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。">
-<meta property="og:updated_time" content="2017-10-22T16:30:29.493Z">
+<meta property="og:image" content="http://longmimi.github.io/images/Notification.png">
+<meta property="og:updated_time" content="2017-10-23T15:36:34.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="每天一个知识点，万一有你不知道的">
+<meta name="twitter:title" content="每天一个知识点">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。">
+<meta name="twitter:image" content="http://longmimi.github.io/images/Notification.png">
 
 
 
@@ -145,7 +147,7 @@
 
 
 
-  <title> 每天一个知识点，万一有你不知道的 | LongTean's blog </title>
+  <title> 每天一个知识点 | LongTean's blog </title>
   
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
@@ -334,7 +336,7 @@
             
             
               
-                每天一个知识点，万一有你不知道的
+                每天一个知识点
               
             
           </h1>
@@ -389,7 +391,7 @@
 
           
           
-             <span id="/2017/10/20/每天一个知识点，准有你不知道的/" class="leancloud_visitors" data-flag-title="每天一个知识点，万一有你不知道的">
+             <span id="/2017/10/20/每天一个知识点，准有你不知道的/" class="leancloud_visitors" data-flag-title="每天一个知识点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,7 +420,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      514
+                      895
                     </span>
               
 
@@ -434,7 +436,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      2
+                      3
                     </span>
               
             </div>
@@ -455,6 +457,35 @@
       
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。<br><a id="more"></a></p>
 <hr>
+<h2 id="10-23"><a href="#10-23" class="headerlink" title="10.23"></a>10.23</h2><h3 id="关键词：Notification-API"><a href="#关键词：Notification-API" class="headerlink" title="关键词：Notification API"></a>关键词：Notification API</h3><ul>
+<li>Notification的意思是’通知’’提示’，顾名思义，Notification API是html5中新增的桌面通知的API，由于最近学校的课程设计需要做一款网页聊天平台，所以了解到了这个API。</li>
+<li>在web页面中我们经常可以收到消息提醒的通知，在之前比较早的bbs中，有新消息通知一般都是在网页标签页的title中进行闪烁提醒的，原理很简单，就是通过定时器修改document.title</li>
+<li>Notification API的通知是和浏览器脱离的，而且是置顶的，就想某360的弹窗一样（…没有黑的意思）,所以哪怕你最小化了浏览器，消息都会置顶显示。</li>
+<li>这么强大的功能肯定是需要用户授权的：Notification.permission表示当前通知显示的用户授权状态，有三个值：<ul>
+<li>default ：不知道用户的选择，默认。</li>
+<li>granted ：用户允许。 </li>
+<li>denied  ：用户拒绝。</li>
+</ul>
+</li>
+<li><p>向用户请求权限： Notification 对象的requestPermission() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> Notification.requestPermission().then(<span class="function"><span class="keyword">function</span>(<span class="params">permission</span>) </span>&#123;</div><div class="line">    <span class="comment">////</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>当有了用户权限之后，开始推送通知：</p>
+<ul>
+<li>new Notification(title, options)，通过 new 一个Notification来实现。<ul>
+<li>title是必选参数</li>
+<li>options是可选参数</li>
+<li>具体参数使用参见[Notification options 参考][1]</li>
+</ul>
+</li>
+<li>举个栗子：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">var</span> n = <span class="keyword">new</span> Notification(<span class="string">'状态更新提醒栗子'</span>,&#123;</div><div class="line">    <span class="attr">body</span>: <span class="string">'这就是一个提醒的栗子'</span>,</div><div class="line">    <span class="attr">tag</span>: <span class="string">'longtean'</span>,</div><div class="line">    <span class="attr">icon</span>: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b10000_10000&amp;sec=1508772601&amp;di=a9067fffcd5eadece3a0eb28adce1ca4&amp;src=http%3A%2F%2Fww4.sinaimg.cn%2Fmw690%2Fc5dbbd50gw1eghms6srpoj20bz09zmy1.jpg'</span>,</div><div class="line">    <span class="attr">requireInteraction</span>: <span class="literal">true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>效果如图：<br><img src="/images/Notification.png"></li>
+</ul>
+</li>
+</ul>
 <h2 id="10-22"><a href="#10-22" class="headerlink" title="10.22"></a>10.22</h2><h3 id="关键词：’data-‘-属性"><a href="#关键词：’data-‘-属性" class="headerlink" title="关键词：’data-‘ 属性"></a>关键词：’data-‘ 属性</h3><ul>
 <li>html5中新增的用户自定义属性，有两种设置的方式<ul>
 <li>最常用的就是直接写在标签中: data-xxx=”xxx”</li>
@@ -755,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-22"><span class="nav-number">1.</span> <span class="nav-text">10.22</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键词：’data-‘-属性"><span class="nav-number">1.1.</span> <span class="nav-text">关键词：’data-‘ 属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-21"><span class="nav-number">2.</span> <span class="nav-text">10.21</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键词：毛玻璃效果"><span class="nav-number">2.1.</span> <span class="nav-text">关键词：毛玻璃效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-20"><span class="nav-number">3.</span> <span class="nav-text">10.20</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键词：锚点定位"><span class="nav-number">3.1.</span> <span class="nav-text">关键词：锚点定位</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-23"><span class="nav-number">1.</span> <span class="nav-text">10.23</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键词：Notification-API"><span class="nav-number">1.1.</span> <span class="nav-text">关键词：Notification API</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-22"><span class="nav-number">2.</span> <span class="nav-text">10.22</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键词：’data-‘-属性"><span class="nav-number">2.1.</span> <span class="nav-text">关键词：’data-‘ 属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-21"><span class="nav-number">3.</span> <span class="nav-text">10.21</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键词：毛玻璃效果"><span class="nav-number">3.1.</span> <span class="nav-text">关键词：毛玻璃效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-20"><span class="nav-number">4.</span> <span class="nav-text">10.20</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键词：锚点定位"><span class="nav-number">4.1.</span> <span class="nav-text">关键词：锚点定位</span></a></li></ol></li></ol></div>
             
 
           </div>
