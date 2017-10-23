@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-10-23T15:36:34.876Z</updated>
+  <updated>2017-10-23T15:54:12.072Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://longmimi.github.io/2017/10/20/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AA%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%8C%E5%87%86%E6%9C%89%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84/"/>
     <id>http://longmimi.github.io/2017/10/20/每天一个知识点，准有你不知道的/</id>
     <published>2017-10-20T14:58:17.000Z</published>
-    <updated>2017-10-23T15:36:34.876Z</updated>
+    <updated>2017-10-23T15:54:12.072Z</updated>
     
     <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。<br><a id="more"></a></p>
 <hr>
@@ -42,7 +42,7 @@
 <li>new Notification(title, options)，通过 new 一个Notification来实现。<ul>
 <li>title是必选参数</li>
 <li>options是可选参数</li>
-<li>具体参数使用参见[Notification options 参考][1]</li>
+<li>具体参数使用参见<a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification#Instance_properties" target="_blank" rel="external">Notification options 参考</a></li>
 </ul>
 </li>
 <li>举个栗子：</li>
