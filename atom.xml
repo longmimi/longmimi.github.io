@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-10-24T15:55:23.054Z</updated>
+  <updated>2017-10-26T15:23:28.957Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,11 +20,21 @@
     <link href="http://longmimi.github.io/2017/10/20/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AA%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%8C%E5%87%86%E6%9C%89%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84/"/>
     <id>http://longmimi.github.io/2017/10/20/每天一个知识点，准有你不知道的/</id>
     <published>2017-10-20T14:58:17.000Z</published>
-    <updated>2017-10-24T15:55:23.054Z</updated>
+    <updated>2017-10-26T15:23:28.957Z</updated>
     
     <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经常看脱口秀的朋友应该都知道有一个脱口秀演员“池子”，声称初中毕业的他每天最喜欢的就是给别人普及知识点，而我的这个想法也是受他的启发，每天在博客上总结一个自己学到的知识点，慢慢见证自己的成长。希望可以坚持下去。好了，废话不多说，我们开始吧。<br><a id="more"></a></p>
 <hr>
-<h2 id="10-24"><a href="#10-24" class="headerlink" title="10.24"></a>10.24</h2><h3 id="程序员节"><a href="#程序员节" class="headerlink" title="程序员节"></a>程序员节</h3><ul>
+<h2 id="10-24"><a href="#10-24" class="headerlink" title="10.24"></a>10.24</h2><h3 id="关键词：CSS3的calc-用法"><a href="#关键词：CSS3的calc-用法" class="headerlink" title="关键词：CSS3的calc()用法"></a>关键词：CSS3的calc()用法</h3><pre><code>* calc()函数用于动态计算长度值
+* calc()函数支持 &quot;+&quot;, &quot;-&quot;, &quot;*&quot;, &quot;/&quot; 运算
+* calc()函数使用标准的数学运算优先级规则
+</code></pre><ul>
+<li><p>举个栗子：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">border</span>:xxxx;</div><div class="line">    <span class="attribute">width</span>:<span class="built_in">calc</span>(100%-20px)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>上面这段代码的意思是在宽度100%的基础上减去20px;</p>
+</li>
+</ul>
+<h2 id="10-24-1"><a href="#10-24-1" class="headerlink" title="10.24"></a>10.24</h2><h3 id="程序员节"><a href="#程序员节" class="headerlink" title="程序员节"></a>程序员节</h3><ul>
 <li>今天是1024，传说中的“程序员节”，今天无耻的断更一天。。。。。</li>
 </ul>
 <h2 id="10-23"><a href="#10-23" class="headerlink" title="10.23"></a>10.23</h2><h3 id="关键词：Notification-API"><a href="#关键词：Notification-API" class="headerlink" title="关键词：Notification API"></a>关键词：Notification API</h3><ul>
