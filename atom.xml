@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-11-14T09:26:33.071Z</updated>
+  <updated>2017-11-14T09:45:10.754Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://longmimi.github.io/2017/11/14/%E9%AB%98%E5%A4%A7%E4%B8%8A%E7%9A%84Git/"/>
     <id>http://longmimi.github.io/2017/11/14/高大上的Git/</id>
     <published>2017-11-14T03:22:16.000Z</published>
-    <updated>2017-11-14T09:26:33.071Z</updated>
+    <updated>2017-11-14T09:45:10.754Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>　以前和小伙伴做项目，总是自己忙自己的，需要合并的时候，要么U盘传，要么qq发文件，最头疼的就是解决冲突问题，误删别人的代码是经常的事，好在我们同学情谊深似海，没有因此而提刀相见。自从用上了git之后，这世界仿佛都美好了，我们将自己负责的模块完成之后，使用git提交到 github 或者 coding，不仅不用担心代码会搞丢，而且还能解决冲突，写错了还能回退撤销，简直美滋滋<br><a id="more"></a></p>
@@ -112,9 +112,10 @@
 <li>Git解决冲突<ul>
 <li>git的强大之处就在于，他可以将冲突部分用 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标记出来，当手动解决冲突后，提交合并。</li>
 <li>可以使用<code>git log --graph</code>查看分支合并图</li>
-<li><h3 id="常用git命令及注释"><a href="#常用git命令及注释" class="headerlink" title="常用git命令及注释"></a>常用git命令及注释</h3></li>
 </ul>
 </li>
+</ul>
+<h3 id="常用git命令及注释"><a href="#常用git命令及注释" class="headerlink" title="常用git命令及注释"></a>常用git命令及注释</h3><ul>
 <li>add  #添加文件内容到文件缓存区</li>
 <li>branch     #列出、创建或删除分支</li>
 <li>checkout   #检出一个分支或路径到工作区</li>
@@ -332,7 +333,7 @@
 <blockquote>
 <p>实现</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(<span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</div><div class="line">			<span class="keyword">if</span> (prompt(<span class="string">'请输入文章密码'</span>,<span class="string">''</span>) !== <span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</div><div class="line">				alert(<span class="string">'密码私信我！！'</span>);</div><div class="line">				history.back();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;)();</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(<span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</div><div class="line">			<span class="keyword">if</span> (prompt(<span class="string">'请输入文章密码'</span>,<span class="string">''</span>) !== <span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</div><div class="line">				alert(<span class="string">'密码私信我！！'</span>);</div><div class="line">				history.back();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;)();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>关于这个page.password,其实是初始化每篇文章的时候生成的顶部的变量，就像这样</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 文章加密</div><div class="line">date: 2017-10-13 15:50:52</div><div class="line">tags: 功能</div><div class="line">categories: 博客</div><div class="line">description: 为文章添加了访问密码</div><div class="line">password: longtean</div><div class="line">---</div></pre></td></tr></table></figure>
 ]]></content>
