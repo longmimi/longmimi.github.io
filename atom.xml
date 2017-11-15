@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-11-14T09:45:10.754Z</updated>
+  <updated>2017-11-15T04:03:54.286Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://longmimi.github.io/2017/11/14/%E9%AB%98%E5%A4%A7%E4%B8%8A%E7%9A%84Git/"/>
     <id>http://longmimi.github.io/2017/11/14/高大上的Git/</id>
     <published>2017-11-14T03:22:16.000Z</published>
-    <updated>2017-11-14T09:45:10.754Z</updated>
+    <updated>2017-11-15T04:03:54.286Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>　以前和小伙伴做项目，总是自己忙自己的，需要合并的时候，要么U盘传，要么qq发文件，最头疼的就是解决冲突问题，误删别人的代码是经常的事，好在我们同学情谊深似海，没有因此而提刀相见。自从用上了git之后，这世界仿佛都美好了，我们将自己负责的模块完成之后，使用git提交到 github 或者 coding，不仅不用担心代码会搞丢，而且还能解决冲突，写错了还能回退撤销，简直美滋滋<br><a id="more"></a></p>
@@ -71,7 +71,7 @@
 <li>Git 版本回退<ul>
 <li><code>git log</code>  可以查看提交历史，以便确定要回退到哪个版本，用 commit id 来回退</li>
 <li><code>git reset --hard HEAD^</code> <code>^</code>表示退回上一版本,<code>^^</code> 上两版本 <code>HEAD~100</code>上100版本 </li>
-<li><code>git commit --hard commitid</code> 任意之前版本</li>
+<li><code>git reset --hard commit_id</code> 任意之前版本</li>
 </ul>
 </li>
 <li>Git 版本前进<ul>
