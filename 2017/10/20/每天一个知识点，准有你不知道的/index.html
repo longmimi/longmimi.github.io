@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="笔记,知识点," />
+  <meta name="keywords" content="知识点,笔记," />
 
 
 
@@ -115,7 +115,7 @@
 这里记录一些自己平时遇到的知识点
 没错，说三遍，就是这么任性">
 <meta property="og:image" content="http://longmimi.github.io/images/Notification.png">
-<meta property="og:updated_time" content="2017-11-25T09:13:26.467Z">
+<meta property="og:updated_time" content="2017-11-26T15:27:06.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="知识点(长期更新...)">
 <meta name="twitter:description" content="这里记录一些自己平时遇到的知识点
@@ -429,7 +429,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      1,490
+                      1,809
                     </span>
               
 
@@ -445,7 +445,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      6
+                      7
                     </span>
               
             </div>
@@ -468,6 +468,16 @@
 <p></p><p style="text-align:center">这里记录一些自己平时遇到的知识点</p><p></p>
 <p></p><p style="text-align:right">这里记录一些自己平时遇到的知识点</p><p></p>
 <p></p><p style="text-align:center">没错，说三遍，就是这么任性</p><br><a id="more"></a><p></p>
+<hr>
+<h2 id="关键词：-Object-keys-方法"><a href="#关键词：-Object-keys-方法" class="headerlink" title="关键词： Object.keys() 方法"></a>关键词： Object.keys() 方法</h2><ul>
+<li><code>Object.keys()</code>方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 for…in 循环遍历该对象时返回的顺序一致 （两者的主要区别是 一个 for-in 循环还会枚举其原型链上的属性）。 也就是说,<code>Object.keys</code>返回一个所有元素为字符串的数组，其元素来自于从给定的对象上面可直接枚举的属性。这些属性的顺序与手动遍历该对象属性时的一致。</li>
+<li>语法： Object.keys(obj)</li>
+<li>参数： obj 要返回其自身枚举属性的对象</li>
+<li>返回值： 一个表示给定对象的所有可枚举属性的字符串数组</li>
+<li><p>栗子:</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Array 对象 */</span> </div><div class="line"><span class="keyword">let</span> arr = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>];</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(arr)); </div><div class="line"><span class="comment">// ['0', '1', '2']</span></div><div class="line"></div><div class="line"><span class="comment">/* Object 对象 */</span> </div><div class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">foo</span>: <span class="string">"bar"</span>, <span class="attr">baz</span>: <span class="number">42</span> &#125;, </div><div class="line">    keys = <span class="built_in">Object</span>.keys(obj);</div><div class="line"><span class="comment">// CCAC: Chrome Console Auto Copy</span></div><div class="line">copy(keys); </div><div class="line"><span class="comment">// ["foo","baz"]</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/* 类数组 对象 */</span> </div><div class="line"><span class="keyword">let</span> obj = &#123; <span class="number">0</span> : <span class="string">"a"</span>, <span class="number">1</span> : <span class="string">"b"</span>, <span class="number">2</span> : <span class="string">"c"</span>&#125;;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj)); </div><div class="line"><span class="comment">// ['0', '1', '2']</span></div><div class="line"></div><div class="line"><span class="comment">// 类数组 对象, 随机 key 排序 </span></div><div class="line"><span class="keyword">let</span> anObj = &#123; <span class="number">100</span>: <span class="string">'a'</span>, <span class="number">2</span>: <span class="string">'b'</span>, <span class="number">7</span>: <span class="string">'c'</span> &#125;; </div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(anObj)); </div><div class="line"><span class="comment">// ['2', '7', '100']</span></div><div class="line"></div><div class="line"><span class="comment">/* getFoo 是个不可枚举的属性 */</span> </div><div class="line"><span class="keyword">var</span> my_obj = <span class="built_in">Object</span>.create(</div><div class="line">   &#123;&#125;, </div><div class="line">   &#123; <span class="attr">getFoo</span> : &#123; <span class="attr">value</span> : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>.foo &#125; &#125; &#125;</div><div class="line">);</div><div class="line">my_obj.foo = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(my_obj)); </div><div class="line"><span class="comment">// ['foo']</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
 <hr>
 <h2 id="关键词：-Object-assign-方法"><a href="#关键词：-Object-assign-方法" class="headerlink" title="关键词： Object.assign() 方法"></a>关键词： Object.assign() 方法</h2><ul>
 <li>这个方法是ES6中新增的,用于将所有<a href="https://www.cnblogs.com/kongxy/p/4618173.html" target="_blank" rel="external">可枚举属性</a>的值从一个或多个源对象复制到目标对象,它将返回目标对象。</li>
@@ -613,9 +623,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag"># 笔记</a>
-          
             <a href="/tags/知识点/" rel="tag"># 知识点</a>
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
           
         </div>
       
@@ -861,7 +871,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：-Object-assign-方法"><span class="nav-number">1.</span> <span class="nav-text">关键词： Object.assign() 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：CSS-font-family"><span class="nav-number">2.</span> <span class="nav-text">关键词：CSS font-family</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：CSS3的calc-用法"><span class="nav-number">3.</span> <span class="nav-text">关键词：CSS3的calc()用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：Notification-API"><span class="nav-number">4.</span> <span class="nav-text">关键词：Notification API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：’data-‘-属性"><span class="nav-number">5.</span> <span class="nav-text">关键词：’data-‘ 属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：毛玻璃效果"><span class="nav-number">6.</span> <span class="nav-text">关键词：毛玻璃效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：锚点定位"><span class="nav-number">7.</span> <span class="nav-text">关键词：锚点定位</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：-Object-keys-方法"><span class="nav-number">1.</span> <span class="nav-text">关键词： Object.keys() 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：-Object-assign-方法"><span class="nav-number">2.</span> <span class="nav-text">关键词： Object.assign() 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：CSS-font-family"><span class="nav-number">3.</span> <span class="nav-text">关键词：CSS font-family</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：CSS3的calc-用法"><span class="nav-number">4.</span> <span class="nav-text">关键词：CSS3的calc()用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：Notification-API"><span class="nav-number">5.</span> <span class="nav-text">关键词：Notification API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：’data-‘-属性"><span class="nav-number">6.</span> <span class="nav-text">关键词：’data-‘ 属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：毛玻璃效果"><span class="nav-number">7.</span> <span class="nav-text">关键词：毛玻璃效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词：锚点定位"><span class="nav-number">8.</span> <span class="nav-text">关键词：锚点定位</span></a></li></ol></div>
             
 
           </div>
