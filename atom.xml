@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-11-15T04:03:54.286Z</updated>
+  <updated>2017-11-29T09:20:10.989Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -14,6 +14,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>less学习笔记</title>
+    <link href="http://longmimi.github.io/2017/11/29/less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://longmimi.github.io/2017/11/29/less学习笔记/</id>
+    <published>2017-11-29T09:10:31.000Z</published>
+    <updated>2017-11-29T09:20:10.989Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="less介绍"><a href="#less介绍" class="headerlink" title="less介绍"></a>less介绍</h2><p>less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 <code>变量</code>，<code>继承</code>，<code>运算</code> ，<code>混合（mixins）</code>，<code>函数</code>，<code>作用域</code>，<code>嵌套规则</code>等功能，让CSS更加容易编写和维护。<br><a id="more"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>npm install -g less</p>
+</blockquote>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><h4 id="命令行用法"><a href="#命令行用法" class="headerlink" title="命令行用法"></a>命令行用法</h4><h4 id="第三方软件用法"><a href="#第三方软件用法" class="headerlink" title="第三方软件用法"></a>第三方软件用法</h4><h4 id="浏览器端使用"><a href="#浏览器端使用" class="headerlink" title="浏览器端使用"></a>浏览器端使用</h4><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><ul>
+<li><code>/*  */</code> 会被编译保留在css中</li>
+<li><code>//</code> 不会被编译css中不会保留</li>
+</ul>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
+<li>和js中的变量一样，只是less的变量定义不是使用 <code>var</code> 而是使用 <code>@</code> </li>
+</ul>
+<h4 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h4><ul>
+<li><p>我的理解是，混合就是把别的选择器的样式拿到另一个选择器中使用</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@my-width:</span><span class="number">300px</span>;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="variable">@my-width</span>;</div><div class="line">  <span class="selector-class">.border</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//混合</span></div><div class="line"><span class="selector-class">.border</span>&#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>编译之后生成</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid pink;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.border</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>但是这样全部拿过来用难免有些死板，于是有带参混合</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*带参混合*/</span></div><div class="line"><span class="selector-class">.border</span>&#123;</div><div class="line">  <span class="selector-class">.border_daican</span>(<span class="number">30px</span>);</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.border_daican</span>(<span class="variable">@canshu</span>)&#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> dashed <span class="variable">@canshu</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>编译后</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*带参混合*/</span></div><div class="line"><span class="selector-class">.border</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> dashed <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>注：带参混合也可以给默认值，那么使用的时候，如果参数为空，那编译出来就是给的默认值，如果参数不空，那编译出来就是自己给的值</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*带参混合*/</span></div><div class="line"><span class="selector-class">.border</span>&#123;</div><div class="line">  <span class="selector-class">.border_daican</span>(); <span class="comment">//此处为空，则使用默认值，不空则是自己写的值</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.border_daican</span>(<span class="variable">@canshu</span>:默认值 带单位)&#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> dashed <span class="variable">@canshu</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h4><ul>
+<li><p>我的理解是写多个同名的class,然后传不同的参数，按照参数来使用less</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*匹配模式*/</span></div><div class="line"><span class="selector-class">.triangle</span>(top)&#123; <span class="comment">//定义朝上的三角形样式</span></div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">overflow</span>: hidden;</div><div class="line">	<span class="attribute">border-width</span>:<span class="number">20px</span>;</div><div class="line">	<span class="attribute">border-color</span>: transparent transparent blue transparent;</div><div class="line">	<span class="attribute">border-style</span>: solid;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.triangle</span>(bottom)&#123; <span class="comment">//定义朝下的三角形样式</span></div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">overflow</span>: hidden;</div><div class="line">	<span class="attribute">border-width</span>:<span class="number">20px</span>;</div><div class="line">	<span class="attribute">border-color</span>:blue transparent transparent transparent;</div><div class="line">	<span class="attribute">border-style</span>: solid;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.sanjiao</span>&#123;</div><div class="line">	<span class="selector-class">.triangle</span>(bottom) <span class="comment">//按参数使用超上的或者朝下的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可以看到上面有大部分重复代码，所以可以将重复代码抽离出来再写一个class,这就短一些了，注意那个<code>@_</code></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*匹配模式*/</span></div><div class="line"><span class="selector-class">.triangle</span>(top)&#123;</div><div class="line">	<span class="attribute">border-color</span>: transparent transparent blue transparent;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.triangle</span>(bottom)&#123;</div><div class="line">	<span class="attribute">border-color</span>:blue transparent transparent transparent;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.triangle</span>(<span class="variable">@_</span>)&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">overflow</span>: hidden;</div><div class="line">	<span class="attribute">border-width</span>:<span class="number">20px</span>;</div><div class="line">	<span class="attribute">border-style</span>: solid;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.sanjiao</span>&#123;</div><div class="line">	<span class="selector-class">.triangle</span>(top)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><ul>
+<li>任何变量，数字，颜色都可以参数运算 这没啥说的，颜色都可以加减。。。<h4 id="嵌套规则"><a href="#嵌套规则" class="headerlink" title="嵌套规则"></a>嵌套规则</h4></li>
+<li><p>HTML中嵌套标签</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*普通写法*/</span></div><div class="line"><span class="selector-class">.list</span>&#123;&#125;</div><div class="line"><span class="selector-class">.list</span> <span class="selector-tag">li</span>&#123;&#125;</div><div class="line"><span class="selector-class">.list</span> <span class="selector-tag">a</span>&#123;&#125;</div><div class="line"><span class="selector-class">.list</span> <span class="selector-tag">span</span>&#123;&#125;</div><div class="line"><span class="comment">/*嵌套写法*/</span></div><div class="line"><span class="selector-class">.list</span>&#123;</div><div class="line">	<span class="selector-tag">li</span>&#123;&#125;</div><div class="line">	<span class="selector-tag">span</span>&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>hover</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*hover*/</span></div><div class="line"><span class="selector-class">.a</span>&#123;</div><div class="line">    <span class="attribute">padding</span>:<span class="number">1px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.a</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*less写法*/</span></div><div class="line"><span class="comment">// &amp; 代表上一层选择器</span></div><div class="line"><span class="selector-class">.a</span>&#123;</div><div class="line">    <span class="attribute">padding</span>:<span class="number">1px</span>;</div><div class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h4><ul>
+<li>避免编译：<code>~&#39;&#39;</code>写在 <code>`` </code>中的css不会被编译</li>
+<li>！important 关键字： 加上也会被编译</li>
+</ul>
+<p style="text-align:center">未完待续…</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;less介绍&quot;&gt;&lt;a href=&quot;#less介绍&quot; class=&quot;headerlink&quot; title=&quot;less介绍&quot;&gt;&lt;/a&gt;less介绍&lt;/h2&gt;&lt;p&gt;less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 &lt;code&gt;变量&lt;/code&gt;，&lt;code&gt;继承&lt;/code&gt;，&lt;code&gt;运算&lt;/code&gt; ，&lt;code&gt;混合（mixins）&lt;/code&gt;，&lt;code&gt;函数&lt;/code&gt;，&lt;code&gt;作用域&lt;/code&gt;，&lt;code&gt;嵌套规则&lt;/code&gt;等功能，让CSS更加容易编写和维护。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://longmimi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="CSS" scheme="http://longmimi.github.io/tags/CSS/"/>
+    
+      <category term="LESS" scheme="http://longmimi.github.io/tags/LESS/"/>
+    
+  </entry>
   
   <entry>
     <title>高大上的Git</title>
@@ -309,9 +382,9 @@
       <category term="笔记" scheme="http://longmimi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="知识点" scheme="http://longmimi.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    
       <category term="笔记" scheme="http://longmimi.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="知识点" scheme="http://longmimi.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
   </entry>
   

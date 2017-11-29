@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="CSS,LESS," />
 
 
 
@@ -102,25 +102,16 @@
 </script>
 
 
-<meta name="description" content="前言
-　以前和小伙伴做项目，总是自己忙自己的，需要合并的时候，要么U盘传，要么qq发文件，最头疼的就是解决冲突问题，误删别人的代码是经常的事，好在我们同学情谊深似海，没有因此而提刀相见。自从用上了git之后，这世界仿佛都美好了，我们将自己负责的模块完成之后，使用git提交到 github 或者 coding，不仅不用担心代码会搞丢，而且还能解决冲突，写错了还能回退撤销，简直美滋滋">
+<meta name="description" content="less介绍less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 变量，继承，运算 ，混合（mixins），函数，作用域，嵌套规则等功能，让CSS更加容易编写和维护。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="高大上的Git">
-<meta property="og:url" content="http://longmimi.github.io/2017/11/14/高大上的Git/index.html">
+<meta property="og:title" content="less学习笔记">
+<meta property="og:url" content="http://longmimi.github.io/2017/11/29/less学习笔记/index.html">
 <meta property="og:site_name" content="LongTean's blog">
-<meta property="og:description" content="前言
-　以前和小伙伴做项目，总是自己忙自己的，需要合并的时候，要么U盘传，要么qq发文件，最头疼的就是解决冲突问题，误删别人的代码是经常的事，好在我们同学情谊深似海，没有因此而提刀相见。自从用上了git之后，这世界仿佛都美好了，我们将自己负责的模块完成之后，使用git提交到 github 或者 coding，不仅不用担心代码会搞丢，而且还能解决冲突，写错了还能回退撤销，简直美滋滋">
-<meta property="og:image" content="http://longmimi.github.io/images/1.png">
-<meta property="og:image" content="http://longmimi.github.io/images/2.png">
-<meta property="og:image" content="http://longmimi.github.io/images/3.png">
-<meta property="og:image" content="http://longmimi.github.io/images/4.png">
-<meta property="og:image" content="http://longmimi.github.io/images/5.png">
-<meta property="og:updated_time" content="2017-11-15T04:03:54.286Z">
+<meta property="og:description" content="less介绍less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 变量，继承，运算 ，混合（mixins），函数，作用域，嵌套规则等功能，让CSS更加容易编写和维护。">
+<meta property="og:updated_time" content="2017-11-29T09:20:10.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="高大上的Git">
-<meta name="twitter:description" content="前言
-　以前和小伙伴做项目，总是自己忙自己的，需要合并的时候，要么U盘传，要么qq发文件，最头疼的就是解决冲突问题，误删别人的代码是经常的事，好在我们同学情谊深似海，没有因此而提刀相见。自从用上了git之后，这世界仿佛都美好了，我们将自己负责的模块完成之后，使用git提交到 github 或者 coding，不仅不用担心代码会搞丢，而且还能解决冲突，写错了还能回退撤销，简直美滋滋">
-<meta name="twitter:image" content="http://longmimi.github.io/images/1.png">
+<meta name="twitter:title" content="less学习笔记">
+<meta name="twitter:description" content="less介绍less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 变量，继承，运算 ，混合（mixins），函数，作用域，嵌套规则等功能，让CSS更加容易编写和维护。">
 
 
 
@@ -148,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://longmimi.github.io/2017/11/14/高大上的Git/"/>
+  <link rel="canonical" href="http://longmimi.github.io/2017/11/29/less学习笔记/"/>
 
 
 
 
 
-  <title> 高大上的Git | LongTean's blog </title>
+  <title> less学习笔记 | LongTean's blog </title>
   
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
@@ -322,7 +313,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://longmimi.github.io/2017/11/14/高大上的Git/">
+    <link itemprop="mainEntityOfPage" href="http://longmimi.github.io/2017/11/29/less学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LongTean">
@@ -343,7 +334,7 @@
             
             
               
-                高大上的Git
+                less学习笔记
               
             
           </h1>
@@ -358,8 +349,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T11:22:16+08:00">
-                2017-11-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-29T17:10:31+08:00">
+                2017-11-29
               </time>
             
 
@@ -398,7 +389,7 @@
 
           
           
-             <span id="/2017/11/14/高大上的Git/" class="leancloud_visitors" data-flag-title="高大上的Git">
+             <span id="/2017/11/29/less学习笔记/" class="leancloud_visitors" data-flag-title="less学习笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -427,7 +418,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      2,289
+                      648
                     </span>
               
 
@@ -443,7 +434,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      8
+                      3
                     </span>
               
             </div>
@@ -462,121 +453,56 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>　以前和小伙伴做项目，总是自己忙自己的，需要合并的时候，要么U盘传，要么qq发文件，最头疼的就是解决冲突问题，误删别人的代码是经常的事，好在我们同学情谊深似海，没有因此而提刀相见。自从用上了git之后，这世界仿佛都美好了，我们将自己负责的模块完成之后，使用git提交到 github 或者 coding，不仅不用担心代码会搞丢，而且还能解决冲突，写错了还能回退撤销，简直美滋滋<br><a id="more"></a></p>
+        <h2 id="less介绍"><a href="#less介绍" class="headerlink" title="less介绍"></a>less介绍</h2><p>less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 <code>变量</code>，<code>继承</code>，<code>运算</code> ，<code>混合（mixins）</code>，<code>函数</code>，<code>作用域</code>，<code>嵌套规则</code>等功能，让CSS更加容易编写和维护。<br><a id="more"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>npm install -g less</p>
 </blockquote>
-<p>虽说用了git 一段时间了，但是却没有深入了解过，今天随着廖雪峰大大的git教程来学习一把，顺便总结一下，方便以后复习。</p>
-<h3 id="集中式版本管理和分布式版本管理"><a href="#集中式版本管理和分布式版本管理" class="headerlink" title="集中式版本管理和分布式版本管理"></a>集中式版本管理和分布式版本管理</h3><ul>
-<li>集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。集中式版本控制系统最大的毛病就是必须联网才能工作。</li>
-<li>分布式版本控制系统根本没有“中央服务器”,每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。但是这里说的不依赖网络，并不是完全不依赖网络就能完成所以的事情，比如让其他开发人员拿到你的改动，所以说这里所说的不依赖网络只是相对的，在没有网络的情况下，可以提交变动到本地的版本库，但最终还是要依赖网络提交变动让其他开发人员看到。</li>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><h4 id="命令行用法"><a href="#命令行用法" class="headerlink" title="命令行用法"></a>命令行用法</h4><h4 id="第三方软件用法"><a href="#第三方软件用法" class="headerlink" title="第三方软件用法"></a>第三方软件用法</h4><h4 id="浏览器端使用"><a href="#浏览器端使用" class="headerlink" title="浏览器端使用"></a>浏览器端使用</h4><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><ul>
+<li><code>/*  */</code> 会被编译保留在css中</li>
+<li><code>//</code> 不会被编译css中不会保留</li>
 </ul>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
-<li>linux下：安装比较简单，像我使用的deepin（linux的一种发行版）只需要一条<br><code>sudo apt-get install git</code> 就可以完成。</li>
-<li>Mac OS X 上：直接从AppStore安装Xcode，Xcode集成了Git，不过默认没有安装，你需要运行Xcode，选择菜单“Xcode”-&gt;“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”就可以完成安装了。</li>
-<li>Windows下：从<code>https://git-for-windows.github.io</code>下载,或者<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">国内镜像</a></li>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
+<li>和js中的变量一样，只是less的变量定义不是使用 <code>var</code> 而是使用 <code>@</code> </li>
 </ul>
-<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><ul>
-<li>版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。<ul>
-<li>在磁盘合适的地方，新建一个目录    </li>
-<li>在win下，为了避免不必要的麻烦，创建目录的路径不要有中文。</li>
-<li>通过<code>git init</code>命令把这个目录变成Git可以管理的仓库：</li>
-<li>瞬间Git就把仓库建好了，而且告诉你是一个空的仓库（empty Git repository），细心的读者可以发现当前目录下多了一个.git的目录，这个目录是Git来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。</li>
-<li>如果你没有看到.git目录，那是因为这个目录默认是隐藏的，用<code>ls -ah</code>命令就可以看见。</li>
-</ul>
+<h4 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h4><ul>
+<li><p>我的理解是，混合就是把别的选择器的样式拿到另一个选择器中使用</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@my-width:</span><span class="number">300px</span>;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="variable">@my-width</span>;</div><div class="line">  <span class="selector-class">.border</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//混合</span></div><div class="line"><span class="selector-class">.border</span>&#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>编译之后生成</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid pink;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.border</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>但是这样全部拿过来用难免有些死板，于是有带参混合</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*带参混合*/</span></div><div class="line"><span class="selector-class">.border</span>&#123;</div><div class="line">  <span class="selector-class">.border_daican</span>(<span class="number">30px</span>);</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.border_daican</span>(<span class="variable">@canshu</span>)&#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> dashed <span class="variable">@canshu</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>编译后</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*带参混合*/</span></div><div class="line"><span class="selector-class">.border</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> dashed <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>注：带参混合也可以给默认值，那么使用的时候，如果参数为空，那编译出来就是给的默认值，如果参数不空，那编译出来就是自己给的值</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*带参混合*/</span></div><div class="line"><span class="selector-class">.border</span>&#123;</div><div class="line">  <span class="selector-class">.border_daican</span>(); <span class="comment">//此处为空，则使用默认值，不空则是自己写的值</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.border_daican</span>(<span class="variable">@canshu</span>:默认值 带单位)&#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> dashed <span class="variable">@canshu</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Git基本操作"><a href="#Git基本操作" class="headerlink" title="Git基本操作"></a>Git基本操作</h3><ul>
-<li>Git提交数据<ul>
-<li>我们可以简单的把工作目录理解成是一个被Git服务程序管理的目录，Git会时刻的追踪目录内文件的改动，另外在安装好了Git服务程序后，默认就会创建好了一个叫做master的分支，我们直接可以提交数据到了</li>
-<li><code>git add &lt;filename&gt;</code> 或者 <code>git add .</code> 添加到缓存区</li>
-<li><code>git commit - m &#39;msg&#39;</code> 提交缓存区文件到本地仓库</li>
-</ul>
+<h4 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h4><ul>
+<li><p>我的理解是写多个同名的class,然后传不同的参数，按照参数来使用less</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*匹配模式*/</span></div><div class="line"><span class="selector-class">.triangle</span>(top)&#123; <span class="comment">//定义朝上的三角形样式</span></div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">overflow</span>: hidden;</div><div class="line">	<span class="attribute">border-width</span>:<span class="number">20px</span>;</div><div class="line">	<span class="attribute">border-color</span>: transparent transparent blue transparent;</div><div class="line">	<span class="attribute">border-style</span>: solid;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.triangle</span>(bottom)&#123; <span class="comment">//定义朝下的三角形样式</span></div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">overflow</span>: hidden;</div><div class="line">	<span class="attribute">border-width</span>:<span class="number">20px</span>;</div><div class="line">	<span class="attribute">border-color</span>:blue transparent transparent transparent;</div><div class="line">	<span class="attribute">border-style</span>: solid;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.sanjiao</span>&#123;</div><div class="line">	<span class="selector-class">.triangle</span>(bottom) <span class="comment">//按参数使用超上的或者朝下的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li>Git移除数据<ul>
-<li>有些时候会向把已经添加到暂存区的文件移除，但仍然希望文件在工作目录中不丢失，换句话说，就是把文件从追踪清单中删除</li>
-<li><code>git rm -cache &lt;filename&gt;</code> 将文件从追踪区域的缓存区域中移除，commit就不会提交了</li>
-</ul>
-</li>
-<li>Git移动数据<ul>
-<li><code>git mv &lt;filename&gt; &lt;newname&gt;</code>  修改文件名称</li>
-</ul>
-</li>
-<li>Git 历史记录<ul>
-<li><code>git log</code> 查看提交历史记录 </li>
-<li><code>git log -2</code> 查看最近提交历史记录</li>
-<li><code>git log -p -1</code> -p显示每次提交的内容差异，-1表示最近一次</li>
-<li><code>git log stat -2</code> -stat简要显示增改行数，这样可以看到修改过的内容，对文件添加或移动的行数，并列出增减的概要信息</li>
-</ul>
-</li>
-<li>Git 版本回退<ul>
-<li><code>git log</code>  可以查看提交历史，以便确定要回退到哪个版本，用 commit id 来回退</li>
-<li><code>git reset --hard HEAD^</code> <code>^</code>表示退回上一版本,<code>^^</code> 上两版本 <code>HEAD~100</code>上100版本 </li>
-<li><code>git reset --hard commit_id</code> 任意之前版本</li>
-</ul>
-</li>
-<li>Git 版本前进<ul>
-<li><code>git reflog</code>  同上</li>
-</ul>
-</li>
-<li>Git 撤销修改<ul>
-<li><code>git checkout -- file</code> </li>
-<li><code>git checkout -- readme.txt</code>意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：<ul>
-<li>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
-<li>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</li>
-</ul>
-</li>
-<li>总之，就是让这个文件回到最近一次git commit或git add时的状态。</li>
-</ul>
-</li>
-<li>Git 删除文件<ul>
-<li><code>git rm &lt;filename&gt;</code></li>
-<li>如果误删  <code>git checkout -- &lt;filename&gt;</code>恢复道这个文件最后commit 那个版本</li>
-</ul>
-</li>
-<li>Git  创建与合并分支<ul>
-<li>我们知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</li>
-<li>一开始的时候，master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点：<br><img src="/images/1.png"></li>
-<li>每次提交，master分支都会向前移动一步，这样，随着你不断提交，master分支的线也越来越长：</li>
-<li>当我们创建新的分支，例如dev时，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上：<br><img src="/images/2.png"></li>
-<li>你看，Git创建一个分支很快，因为除了增加一个dev指针，改改HEAD的指向，工作区的文件都没有任何变化！不过，从现在开始，对工作区的修改和提交就是针对dev分支了，比如新提交一次后，dev指针往前移动一步，而master指针不变：<br><img src="/images/3.png"></li>
-<li>假如我们在dev上的工作完成了，就可以把dev合并到master上。Git怎么合并呢？最简单的方法，就是直接把master指向dev的当前提交，就完成了合并<br><img src="/images/4.png"></li>
-<li>合并完分支后，甚至可以删除dev分支。删除dev分支就是把dev指针给删掉，删掉后，我们就剩下了一条master分支：<br><img src="/images/5.png"></li>
-<li><code>git checkout -b dev</code> 创建一个新分支并切换到Dev分支</li>
-<li><code>git branch</code> 查看当前分支及所有分支</li>
-<li><code>git branch &lt;name&gt;</code> 创建分支</li>
-<li><code>git checkout</code> 切换分支</li>
-<li><code>git merge &lt;name&gt;</code>合并某分支到当前分支</li>
-<li><code>git branch -d &lt;name&gt;</code> 删除分支</li>
-</ul>
-</li>
-<li>Git解决冲突<ul>
-<li>git的强大之处就在于，他可以将冲突部分用 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标记出来，当手动解决冲突后，提交合并。</li>
-<li>可以使用<code>git log --graph</code>查看分支合并图</li>
-</ul>
+<li><p>可以看到上面有大部分重复代码，所以可以将重复代码抽离出来再写一个class,这就短一些了，注意那个<code>@_</code></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*匹配模式*/</span></div><div class="line"><span class="selector-class">.triangle</span>(top)&#123;</div><div class="line">	<span class="attribute">border-color</span>: transparent transparent blue transparent;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.triangle</span>(bottom)&#123;</div><div class="line">	<span class="attribute">border-color</span>:blue transparent transparent transparent;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.triangle</span>(<span class="variable">@_</span>)&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">overflow</span>: hidden;</div><div class="line">	<span class="attribute">border-width</span>:<span class="number">20px</span>;</div><div class="line">	<span class="attribute">border-style</span>: solid;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.sanjiao</span>&#123;</div><div class="line">	<span class="selector-class">.triangle</span>(top)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="常用git命令及注释"><a href="#常用git命令及注释" class="headerlink" title="常用git命令及注释"></a>常用git命令及注释</h3><ul>
-<li>add  #添加文件内容到文件缓存区</li>
-<li>branch     #列出、创建或删除分支</li>
-<li>checkout   #检出一个分支或路径到工作区</li>
-<li>clone  #克隆一个版本库到一个新目录</li>
-<li>commit  #记录变更到版本库</li>
-<li>diff  #显示提交之间、提交和工作区之间等的差异</li>
-<li>fetch  #从另外一个版本库下载对象和引用</li>
-<li>grep  #输出和模式匹配的行</li>
-<li>init  #创建一个空的 Git 版本库或重新初始化一个已存在的版本库</li>
-<li>log  #显示提交日志</li>
-<li>merge  #合并两个或更多开发历史</li>
-<li>pull  #获取并合并另外的版本库或一个本地分支</li>
-<li>push  #更新远程引用和相关的对象</li>
-<li>rebase  #本地提交转移至更新后的上游分支中</li>
-<li>reset  #重置当前HEAD到指定状态</li>
-<li>rm  #从工作区和索引中删除文件</li>
-<li>show  #显示各种类型的对象</li>
-<li>status  #显示工作区状态</li>
-<li>tag  #创建、列出、删除或校验一个GPG签名的 tag 对象</li>
+<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><ul>
+<li>任何变量，数字，颜色都可以参数运算 这没啥说的，颜色都可以加减。。。<h4 id="嵌套规则"><a href="#嵌套规则" class="headerlink" title="嵌套规则"></a>嵌套规则</h4></li>
+<li><p>HTML中嵌套标签</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*普通写法*/</span></div><div class="line"><span class="selector-class">.list</span>&#123;&#125;</div><div class="line"><span class="selector-class">.list</span> <span class="selector-tag">li</span>&#123;&#125;</div><div class="line"><span class="selector-class">.list</span> <span class="selector-tag">a</span>&#123;&#125;</div><div class="line"><span class="selector-class">.list</span> <span class="selector-tag">span</span>&#123;&#125;</div><div class="line"><span class="comment">/*嵌套写法*/</span></div><div class="line"><span class="selector-class">.list</span>&#123;</div><div class="line">	<span class="selector-tag">li</span>&#123;&#125;</div><div class="line">	<span class="selector-tag">span</span>&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>hover</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*hover*/</span></div><div class="line"><span class="selector-class">.a</span>&#123;</div><div class="line">    <span class="attribute">padding</span>:<span class="number">1px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.a</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*less写法*/</span></div><div class="line"><span class="comment">// &amp; 代表上一层选择器</span></div><div class="line"><span class="selector-class">.a</span>&#123;</div><div class="line">    <span class="attribute">padding</span>:<span class="number">1px</span>;</div><div class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-
+<h4 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h4><ul>
+<li>避免编译：<code>~&#39;&#39;</code>写在 <code>`` </code>中的css不会被编译</li>
+<li>！important 关键字： 加上也会被编译</li>
+</ul>
+<p style="text-align:center">未完待续…</p>
       
     </div>
     <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
@@ -599,7 +525,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/LESS/" rel="tag"># LESS</a>
           
         </div>
       
@@ -612,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/20/每天一个知识点，准有你不知道的/" rel="next" title="知识点(长期更新...)">
-                <i class="fa fa-chevron-left"></i> 知识点(长期更新...)
+              <a href="/2017/11/14/高大上的Git/" rel="next" title="高大上的Git">
+                <i class="fa fa-chevron-left"></i> 高大上的Git
               </a>
             
           </div>
@@ -621,10 +549,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/29/less学习笔记/" rel="prev" title="less学习笔记">
-                less学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -845,7 +769,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#集中式版本管理和分布式版本管理"><span class="nav-number">1.1.</span> <span class="nav-text">集中式版本管理和分布式版本管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库"><span class="nav-number">1.3.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git基本操作"><span class="nav-number">1.4.</span> <span class="nav-text">Git基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用git命令及注释"><span class="nav-number">1.5.</span> <span class="nav-text">常用git命令及注释</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#less介绍"><span class="nav-number">1.</span> <span class="nav-text">less介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译"><span class="nav-number">3.</span> <span class="nav-text">编译</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令行用法"><span class="nav-number">3.0.1.</span> <span class="nav-text">命令行用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方软件用法"><span class="nav-number">3.0.2.</span> <span class="nav-text">第三方软件用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器端使用"><span class="nav-number">3.0.3.</span> <span class="nav-text">浏览器端使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">4.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">4.0.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">4.0.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#混合"><span class="nav-number">4.0.3.</span> <span class="nav-text">混合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#匹配模式"><span class="nav-number">4.0.4.</span> <span class="nav-text">匹配模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算"><span class="nav-number">4.0.5.</span> <span class="nav-text">运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#嵌套规则"><span class="nav-number">4.0.6.</span> <span class="nav-text">嵌套规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#杂项"><span class="nav-number">4.0.7.</span> <span class="nav-text">杂项</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
