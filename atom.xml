@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://longmimi.github.io/"/>
-  <updated>2017-11-29T09:20:10.989Z</updated>
+  <updated>2017-12-01T10:13:49.876Z</updated>
   <id>http://longmimi.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://longmimi.github.io/2017/11/29/less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://longmimi.github.io/2017/11/29/less学习笔记/</id>
     <published>2017-11-29T09:10:31.000Z</published>
-    <updated>2017-11-29T09:20:10.989Z</updated>
+    <updated>2017-12-01T10:13:49.876Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="less介绍"><a href="#less介绍" class="headerlink" title="less介绍"></a>less介绍</h2><p>less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 <code>变量</code>，<code>继承</code>，<code>运算</code> ，<code>混合（mixins）</code>，<code>函数</code>，<code>作用域</code>，<code>嵌套规则</code>等功能，让CSS更加容易编写和维护。<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<h2 id="less介绍"><a href="#less介绍" class="headerlink" title="less介绍"></a>less介绍</h2><p>less是一门CSS预处理语言，它扩充了CSS语言，增加了诸如 <code>变量</code>，<code>继承</code>，<code>运算</code> ，<code>混合（mixins）</code>，<code>函数</code>，<code>作用域</code>，<code>嵌套规则</code>等功能，让CSS更加容易编写和维护。<br><a id="more"></a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
 <p>npm install -g less</p>
 </blockquote>
@@ -75,7 +75,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;less介绍&quot;&gt;&lt;a href=&quot;#less介绍&quot; class=&quot;headerlink&quot; title=&quot;less介绍&quot;&gt;&lt;/a&gt;less介绍&lt;/h2&gt;&lt;p&gt;less是一门CSS预处理语言，它扩充了CSS语言，增加了侏儒 &lt;code&gt;变量&lt;/code&gt;，&lt;code&gt;继承&lt;/code&gt;，&lt;code&gt;运算&lt;/code&gt; ，&lt;code&gt;混合（mixins）&lt;/code&gt;，&lt;code&gt;函数&lt;/code&gt;，&lt;code&gt;作用域&lt;/code&gt;，&lt;code&gt;嵌套规则&lt;/code&gt;等功能，让CSS更加容易编写和维护。&lt;br&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;less介绍&quot;&gt;&lt;a href=&quot;#less介绍&quot; class=&quot;headerlink&quot; title=&quot;less介绍&quot;&gt;&lt;/a&gt;less介绍&lt;/h2&gt;&lt;p&gt;less是一门CSS预处理语言，它扩充了CSS语言，增加了诸如 &lt;code&gt;变量&lt;/code&gt;，&lt;code&gt;继承&lt;/code&gt;，&lt;code&gt;运算&lt;/code&gt; ，&lt;code&gt;混合（mixins）&lt;/code&gt;，&lt;code&gt;函数&lt;/code&gt;，&lt;code&gt;作用域&lt;/code&gt;，&lt;code&gt;嵌套规则&lt;/code&gt;等功能，让CSS更加容易编写和维护。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
