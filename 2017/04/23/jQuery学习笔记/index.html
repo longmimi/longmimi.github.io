@@ -1,0 +1,1061 @@
+ <!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="笔记,jquery," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LongTean's blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="前言&amp;emsp;&amp;emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过w3school学习。  课程章结jQuery介绍关键词：简介、安装、语法、选择器、事件、名称冲突  简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do mo">
+<meta name="keywords" content="笔记,jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery使用总结">
+<meta property="og:url" content="http://longmimi.github.io/2017/04/23/jQuery学习笔记/index.html">
+<meta property="og:site_name" content="LongTean&#39;s blog">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过w3school学习。  课程章结jQuery介绍关键词：简介、安装、语法、选择器、事件、名称冲突  简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do mo">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-04T15:19:00.205Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery使用总结">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过w3school学习。  课程章结jQuery介绍关键词：简介、安装、语法、选择器、事件、名称冲突  简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do mo">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://longmimi.github.io/2017/04/23/jQuery学习笔记/"/>
+
+
+
+
+
+  <title>jQuery使用总结 | LongTean's blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6b33b44487ae3ade92e9b2c3d32374c6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/longmimi"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LongTean's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://longmimi.github.io/2017/04/23/jQuery学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LongTean">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LongTean's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jQuery使用总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-23T01:10:59+08:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过<a href="http://www.w3cschool.cn/jquery/" target="_blank" rel="noopener">w3school</a>学习。</p>
+<hr>
+<h2 id="课程章结"><a href="#课程章结" class="headerlink" title="课程章结"></a>课程章结</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><p><strong>关键词</strong>：<strong>简介</strong>、<strong>安装</strong>、<strong>语法</strong>、<strong>选择器</strong>、<strong>事件</strong>、<strong>名称冲突</strong></p>
+<ul>
+<li>简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do more”,也就是一个轻量级的”写的少，做的多”的JavaScript库。<a id="more"></a></li>
+<li><p>安装：    </p>
+<ul>
+<li>下载<a href="http://jquery.com/download/" target="_blank" rel="noopener">jQuery</a>到本地，从本地载入</li>
+<li>引用CDN中加载jQuery<ul>
+<li>使用以下代码可以加载CDN，使用引用CDN的方式有一个很大的优势就是许多用户在访问其他站点的时候已经加载过jQuery，结果就是当这些人访问站点时，会直接从缓存中加载jQuery，从而减少加载时间。而且，大多数CDN都可以确保用户在请求文件时，从最近的服务器上返回响应，从而提高加载速度；<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://libs.baidu.com/jquery/1.10.2/jquery.min.js"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>语法：</p>
+<ul>
+<li>jQuery的基本语法是<code>$(selector).action()</code><ul>
+<li>美元符号定义 jQuery</li>
+<li>选择符（selector）”查询”和”查找” HTML 元素</li>
+<li>action()函数 执行对元素的操作</li>
+</ul>
+</li>
+<li>为了防止文档在完全加载（就绪）之前运行 jQuery 代码，<code>$(document).ready(function(){});</code>将jQuery函数写在这个函数中</li>
+</ul>
+</li>
+<li>选择器<ul>
+<li>常见的选择器有以下几种：<ul>
+<li>元素选择器：<code>$(&#39;p&#39;)</code></li>
+<li>id选择器：<code>$(&#39;#id&#39;)</code></li>
+<li>.class选择器：<code>$(&quot;.class&quot;)</code></li>
+<li><code>$(&#39;p.test&#39;)</code>表示选择类别名为test的p标签</li>
+<li><code>$(&quot;a[target=&#39;_blank&#39;]&quot;)</code>：表示选取所有<code>target</code>属性值为<code>_blank</code>的<code>a</code>标签</li>
+<li>更多可参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank" rel="noopener">jquery选择器手册</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>事件<ul>
+<li>jQuery事件处理方法是jQuery的核心函数，事件处理程序指的是当HTML中发生某些事件所调用的方法，也叫作“触发”；（通常把jQuery代码放在<head><meta name="generator" content="Hexo 3.8.0">部分的事件处理方法中；详细的事件参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="noopener">jQuery事件手册</a> </head></li>
+<li>可以分为：鼠标事件（click），键盘事件(keypress)，表单事件(submit)，文档/窗口事件(load、scroll)等等</li>
+<li>实例:<ul>
+<li><code>$(this).hide()</code> - 隐藏当前元素</li>
+<li><code>$(&quot;p&quot;).hide()</code> - 隐藏所有段落</li>
+<li><code>$(&quot;p .test&quot;).hide()</code> - 隐藏所有 class=”test” 的段落</li>
+<li><code>$(&quot;#test&quot;).hide()</code> - 隐藏所有 id=”test” 的元素</li>
+<li><code>$(&#39;p&#39;).click(function(){});</code>-点击p元素执行函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>名称冲突<ul>
+<li>由于其他库也可能使用$符号，那么就会引起冲突，jQuery中使用noConflict()方法来解决这个问题</li>
+<li>注意事项<ul>
+<li>把所有的jQuery代码置于事件处理函数中；</li>
+<li>把所有事件处理函数置于文档就绪事件处理器中；</li>
+<li>把jQuery代码置于单独的.js文件中;</li>
+<li>如果存在名称冲突，则重命名jQuery库；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>示例</em></p>
+<iframe height="265" scrolling="no" title="jQuery1" src="//codepen.io/longtean/embed/vmGQyj/?height=265&theme-id=0&default-tab=html,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/longtean/pen/vmGQyj/" target="_blank" rel="noopener">jQuery1</a> by LongTean (<a href="http://codepen.io/longtean" target="_blank" rel="noopener">@longtean</a>) on <a href="http://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="jquery效果"><a href="#jquery效果" class="headerlink" title="jquery效果"></a>jquery效果</h3><p><strong>关键词</strong>：<strong>隐藏显示</strong>、<strong>淡入淡出</strong>、<strong>滑动</strong>、<strong>动画</strong>、<strong>stop()</strong>、<strong>callback方法</strong>、<strong>chaining</strong></p>
+<ul>
+<li>显示隐藏<ul>
+<li>show(),hide(),比如隐藏的使用语法为：<code>$(&#39;selector&#39;).hide(speed,callback)</code>,其中speed为速度，callback为完成隐藏动作后执行的函数，另外，toggle()可以显示和隐藏</li>
+</ul>
+</li>
+<li>淡入淡出<ul>
+<li>有fadeIn(),fadeToggle(),fadeTo(),使用语法同上，fadeTo(speed,opacity,callback)可以改变透明度。</li>
+</ul>
+</li>
+<li>滑动<ul>
+<li>slideDown(),slideToggle(speed，callback)</li>
+</ul>
+</li>
+<li><p>动画</p>
+<ul>
+<li><p>animate()方法,使用语法为<code>$(selector).animate({params},speed,callback);</code>必需的 params 参数定义形成动画的 CSS 属性,可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒,可选的 callback 参数是动画完成后所执行的函数名称。</p>
+<ul>
+<li><p>例:点击按钮，将div元素向右移动250px的同时，将透明度变为0.5且高度变为150px宽边为150px</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="string">"div"</span>).animate(&#123;</span><br><span class="line">  		left:<span class="string">'250px'</span>,</span><br><span class="line">  		opacity:<span class="string">'0.5'</span>,</span><br><span class="line">  		height:<span class="string">'150px'</span>,</span><br><span class="line">  		width:<span class="string">'150px'</span></span><br><span class="line">			&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>需要注意的是css属性名必须像这么写：marginLeft。。。骆驼命名法吧</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>stop()<ul>
+<li>用来在动画或效果完成前对他们停止，使用语法<code>$(selector).stop(stopAll,goToEnd);</code>,其中可选参数stopAll规定是否应该清除动画队列，默认是false，即仅停止活动的动画，但允许队列中的其他动画执行；可选参数goToEnd表示是否立即完成当前动画，默认为false；</li>
+</ul>
+</li>
+<li>callback()<ul>
+<li>此函数在当前动画100%完成之后执行；因为JS语句是逐一执行的，为了避免因为动画还没执行完成而造成动画与之后的语句之间可能产生的错误或者页面冲突，建议以参数的形式添加Callback函数；</li>
+</ul>
+</li>
+<li>chaining<pre><code>* Chaining允许我们在一条语句中添加多个方法，例如`$(&apos;p&apos;).css(&apos;color&apos;, &apos;red&apos;).slideUp(2000).slideDown(2000);`，这是p元素就会先改变css样式，然后收缩，最后张开；
+</code></pre><em>示例</em><iframe height="265" scrolling="no" title="jQuery2" src="//codepen.io/longtean/embed/BRKbQv/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/longtean/pen/BRKbQv/" target="_blank" rel="noopener">jQuery2</a> by LongTean (<a href="http://codepen.io/longtean" target="_blank" rel="noopener">@longtean</a>) on <a href="http://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+</li>
+</ul>
+<h1 id="jquery-HTML"><a href="#jquery-HTML" class="headerlink" title="jquery HTML"></a>jquery HTML</h1><p><strong>关键词</strong>：<strong>捕获</strong>、<strong>设置</strong>、<strong>添加</strong>、<strong>删除</strong>、<strong>css类</strong>、<strong>css()</strong>、<strong>尺寸</strong></p>
+<ul>
+<li>捕获<ul>
+<li>操作DOM的常用方法<ul>
+<li><code>text()</code> - 设置或返回所选元素的文本内容</li>
+<li><code>html()</code> - 设置或返回所选元素的内容（包括 HTML 标记）</li>
+<li><code>val()</code> - 设置或返回表单字段的值</li>
+</ul>
+</li>
+<li>获取属性的方法<ul>
+<li><code>attr()</code>- 用于获取属性值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设置<ul>
+<li>设置内容也是用上一节提到的三个函数，不过需要在括号中加入需要设置的内容；</li>
+<li>同时需要知道，这三个jQuery方法都拥有回调函数，函数有两个参数，分别为被选元素列表中当前元素的下标以及原始值，text()、html() 以及 val() 的回调函数；</li>
+<li>利用attr()来设置属性时可以同时设置多个属性，属性之间利用逗号隔开，此方法同样具有回调函数；</li>
+</ul>
+</li>
+<li>添加元素<ul>
+<li>利用jQuery可以很容易的添加新元素，具体有如下四个方法<ul>
+<li><code>append()</code>- 在被选元素的结尾插入内容或元素</li>
+<li><code>prepend()</code>-在被选元素的开头插入内容或元素；</li>
+<li><code>after()</code>-在被选元素之后插入内容或元素；</li>
+<li><code>before()</code>-在被选元素之前插入内容或元素；</li>
+<li><code>append()</code>和<code>prepend()</code>方法能够通过参数接收无限数量的新元素。可以通过 jQuery 来生成文本/HTML，或者通过 JavaScript 代码和 DOM 元素。<blockquote>
+<p>注意：append()在一个元素的尾部添加内容，不添加新节点，而after是在被选元素之后添加内容，添加了新节点。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>删除<ul>
+<li>删除元素和添加元素类似，有以下几个方法<ul>
+<li><code>remove()</code> -删除被选元素及其子元素，括号中可添加选择器，用于删除符合选择器条件的元素及其子元素；</li>
+<li><code>empty()</code>-从被选元素中删除子元素；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>css类<ul>
+<li>利用jQuery可以很容易的操作css元素，主要方法有<ul>
+<li><code>addClass()</code>-向被选元素添加一个或多个类（添加多个类的时候类名称之间用空格隔开）；</li>
+<li><code>removeClass()</code>-从被选元素删除一个或多个类；</li>
+<li><code>toggle()</code>-对被选元素添加/删除类的切换操作；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>css()<ul>
+<li>设置或返回被选元素的一个或多个样式属性，语法为<code>css(&#39;propertyName&#39;)</code>如果有多个满足被选条件，则只返回第一个元素的属性；</li>
+<li>如需设置CSS属性，则需使用语法为<code>css(&#39;propertyName&#39;, &#39;value&#39;)</code>，此时将所有满足条件的元素的样式都设置成目标样式；</li>
+</ul>
+</li>
+<li>尺寸<ul>
+<li>通过jQuery很容易处理元素和浏览器窗口的尺寸，主要的方法如下：<ul>
+<li><code>width()</code>-设置或返回元素的宽度（不包括内边距、边框和外边距），如果对象为document或者window，则表示返回HTML文档或者浏览器窗口的宽度和高度；如果在括号中加入数字，则表示将对应的尺寸设置为对应的值；</li>
+<li><code>height()</code>-设置或返回元素的高度（不包括内边距、边框和外边距）；</li>
+<li><code>innerWidth()</code>-返回元素的宽度（包括内边距）；</li>
+<li><code>innerHeight()</code>-返回元素的高度（包括内边距）；</li>
+<li><code>outerWidth()</code>-返回元素的宽度（包括内边距和边框），如果括号中增加参数‘true’则表示返回包括内外边距及边框的宽度；</li>
+<li><code>outerHeight()</code>-返回元素的高度（包括内边距和边框），如果括号中增加参数‘true’则表示返回包括内外边距及边框的高度；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>示例</em></p>
+<iframe height="265" scrolling="no" title="jQuery3" src="//codepen.io/longtean/embed/wdWgBE/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/longtean/pen/wdWgBE/" target="_blank" rel="noopener">jQuery3</a> by LongTean (<a href="http://codepen.io/longtean" target="_blank" rel="noopener">@longtean</a>) on <a href="http://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h1 id="jQuery遍历"><a href="#jQuery遍历" class="headerlink" title="jQuery遍历"></a>jQuery遍历</h1><p><strong>关键词</strong>：<strong>遍历</strong>、<strong>祖先</strong>、<strong>后代</strong>、<strong>同胞</strong>、<strong>过滤</strong></p>
+<ul>
+<li>遍历<ul>
+<li>遍历用于根据其相对于其他元素的关系来查找或者选取HTML元素；</li>
+<li>DOM遍历：遍历方法中最大的种类是树遍历<code>tree-traversal</code></li>
+</ul>
+</li>
+<li>祖先<ul>
+<li>祖先元素包括父元素、祖父元素等等，常用的方法为：<ul>
+<li><code>parent()</code>-返回被选元素的直接父元素；</li>
+<li><code>parents()</code>-返回被选元素的所有祖先元素，其中甚至包括文档的根元素；</li>
+<li><code>parentsUntil()</code>-返回介于两个给定元素之间的祖先元素；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>后代<ul>
+<li>与祖先相对的，后代指的是子、孙、曾孙等，常用的方法为：<ul>
+<li><code>children()</code>-返回被选元素的直接子元素；</li>
+<li><code>find()</code>-返回被选元素的被find的元素，包括所有后代；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同胞<ul>
+<li>同胞拥有相同的父元素，常用的方法为：<ul>
+<li><code>siblings()</code>：返回所有被选元素的同胞元素；</li>
+<li><code>next()</code>：返回被选元素的下一个同胞元素；</li>
+<li><code>nextAll()</code>：返回被选元素的所有跟随的同胞元素；</li>
+<li><code>nextUntil()</code>：返回介于两个给定参数之间的所有跟随的同胞元素；</li>
+<li><code>prev()</code>：返回被选元素的上一个同胞元素；</li>
+<li><code>prevAll()</code>:返回被选元素的所有前面的同胞元素；</li>
+<li><code>prevUntil()</code>：返回介于两个给定参数之间的所有的同胞元素；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>过滤<ul>
+<li>缩小搜索元素的范围，常用的方位有以下几种：<ul>
+<li><code>first()</code>：返回被选元素的首个子元素；</li>
+<li><code>last()</code>：返回被选元素的最后一个元素；</li>
+<li><code>eq()</code>：返回被选元素中带有指定索引号的元素；</li>
+<li><code>filter()</code>：返回符合匹配标准的元素集合；</li>
+<li><code>not()</code>：返回不匹配标准的所有元素集合；<h1 id="jquery-Ajax"><a href="#jquery-Ajax" class="headerlink" title="jquery Ajax"></a>jquery Ajax</h1>&emsp;AJAX 是与服务器交换数据的技术，它在不重载全部页面的情况下，实现了对部分网页的更新。AJAX = 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。<br>简短地说，在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示。这一章我准备写一篇专门的博客来介绍，附上教程<a href="http://www.w3cschool.cn/ajax/" target="_blank" rel="noopener">ajax教程</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;写了这么多，不仅是一种分享，希望更多地人看到，能对他们有所帮助，也是自己的一种总结，写在笔记本上的笔记会只属于自己，而写在这里的笔记，属于我们。<br>&emsp;共勉</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          
+            <a href="/tags/jquery/" rel="tag"><i class="fa fa-tag"></i> jquery</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTQzMy83OTk3"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/touxiang.jpg"
+                alt="LongTean" />
+            
+              <p class="site-author-name" itemprop="name">LongTean</p>
+              <p class="site-description motion-element" itemprop="description">不患无位 患所以立</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/longmimi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                大大/友-链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/#array.general" title="js秘密花园" target="_blank">js秘密花园</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://hellopan.top/" title="StPace" target="_blank">StPace</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章结"><span class="nav-number">1.1.</span> <span class="nav-text">课程章结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">1.1.1.</span> <span class="nav-text">jQuery介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery效果"><span class="nav-number">1.1.2.</span> <span class="nav-text">jquery效果</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jquery-HTML"><span class="nav-number">2.</span> <span class="nav-text">jquery HTML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery遍历"><span class="nav-number">3.</span> <span class="nav-text">jQuery遍历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jquery-Ajax"><span class="nav-number">4.</span> <span class="nav-text">jquery Ajax</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LongTean</span>
+
+  
+</div>
+
+
+  <!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
