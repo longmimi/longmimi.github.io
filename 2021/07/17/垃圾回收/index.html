@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="javascript,垃圾回收,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="不患无位 患所以立">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LongTean&#39;s blog">
-<meta property="og:url" content="http://longmimi.github.io/index.html">
+<meta name="description" content="垃圾回收机制（garbage collection）是指当js在创建变量时会自动分配内存，当这些变量不被引用时，将他们占用的内存释放掉，而没有及时将已经不需要的内存占用释放掉，就是内存泄漏。 js常见会内存泄露有以下场景：  没有声明的变量赋值，被会绑定在全局对象上，即使不被使用也不会回收。 不清除定时器 闭包 事件监听未及时清除">
+<meta name="keywords" content="javascript,垃圾回收">
+<meta property="og:type" content="article">
+<meta property="og:title" content="垃圾回收">
+<meta property="og:url" content="http://longmimi.github.io/2021/07/17/垃圾回收/index.html">
 <meta property="og:site_name" content="LongTean&#39;s blog">
-<meta property="og:description" content="不患无位 患所以立">
+<meta property="og:description" content="垃圾回收机制（garbage collection）是指当js在创建变量时会自动分配内存，当这些变量不被引用时，将他们占用的内存释放掉，而没有及时将已经不需要的内存占用释放掉，就是内存泄漏。 js常见会内存泄露有以下场景：  没有声明的变量赋值，被会绑定在全局对象上，即使不被使用也不会回收。 不清除定时器 闭包 事件监听未及时清除">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-18T06:43:01.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LongTean&#39;s blog">
-<meta name="twitter:description" content="不患无位 患所以立">
+<meta name="twitter:title" content="垃圾回收">
+<meta name="twitter:description" content="垃圾回收机制（garbage collection）是指当js在创建变量时会自动分配内存，当这些变量不被引用时，将他们占用的内存释放掉，而没有及时将已经不需要的内存占用释放掉，就是内存泄漏。 js常见会内存泄露有以下场景：  没有声明的变量赋值，被会绑定在全局对象上，即使不被使用也不会回收。 不清除定时器 闭包 事件监听未及时清除">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://longmimi.github.io/">
+  <link rel="canonical" href="http://longmimi.github.io/2021/07/17/垃圾回收/">
 
 
 
 
 
-  <title>LongTean's blog</title>
+  <title>垃圾回收 | LongTean's blog</title>
   
 
 
@@ -155,8 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/longmimi"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
@@ -251,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -283,9 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/07/17/垃圾回收/" itemprop="url">垃圾回收</a></h1>
+          <h1 class="post-title" itemprop="name headline">垃圾回收</h1>
         
 
         <div class="post-meta">
@@ -357,174 +356,69 @@
       
 
       
-        
-          <p>垃圾回收机制（garbage collection）是指当js在创建变量时会自动分配内存，当这些变量不被引用时，将他们占用的内存释放掉，而没有及时将已经不需要的内存占用释放掉，就是内存泄漏。</p>
+        <p>垃圾回收机制（garbage collection）是指当js在创建变量时会自动分配内存，当这些变量不被引用时，将他们占用的内存释放掉，而没有及时将已经不需要的内存占用释放掉，就是内存泄漏。</p>
 <p>js常见会内存泄露有以下场景：</p>
 <ul>
 <li>没有声明的变量赋值，被会绑定在全局对象上，即使不被使用也不会回收。</li>
 <li>不清除定时器</li>
 <li>闭包</li>
-<li>事件监听未及时清除
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/07/17/垃圾回收/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </li></ul></div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://longmimi.github.io/2017/04/23/jQuery学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LongTean">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/uploads/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LongTean's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/23/jQuery学习笔记/" itemprop="url">jQuery使用总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-23T01:10:59+08:00">
-                2017-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;暑假的时候虽然说学习过一遍jQuery了，但只是眼过一遍，熟悉了基本的使用并没有做记录，趁着学校这两天学校运动会放假，决定整理一篇jQuery的笔记，方便以后复习,以上均通过<a href="http://www.w3cschool.cn/jquery/" target="_blank" rel="noopener">w3school</a>学习。</p>
-<hr>
-<h2 id="课程章结"><a href="#课程章结" class="headerlink" title="课程章结"></a>课程章结</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><p><strong>关键词</strong>：<strong>简介</strong>、<strong>安装</strong>、<strong>语法</strong>、<strong>选择器</strong>、<strong>事件</strong>、<strong>名称冲突</strong></p>
+<li>事件监听未及时清除<a id="more"></a>
+js中变量分为 基础类型 和 引用类型。 基础类型在内存中占据固定大小的空间，因此保存在栈内存中；引用类型保存在堆内存中，堆内存的引用指针保存在栈中。</li>
+</ul>
+<p>js 垃圾回收有以下策略：</p>
 <ul>
-<li>简介：jQuery是一个JavaScript函数库,它的宗旨是“write less，do more”,也就是一个轻量级的”写的少，做的多”的JavaScript库。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/23/jQuery学习笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<li>标记清除</li>
+<li>引用计数</li>
+</ul>
+<h3 id="标记清除"><a href="#标记清除" class="headerlink" title="标记清除"></a>标记清除</h3><p>这是js最常用的回收策略。分为 <code>标记</code> 和 <code>清除</code> 两个阶段。</p>
+<ul>
+<li>当一个变量进入上下文中时会被加上标记</li>
+<li>将所有在上下文中的变量以及上下文被访问引用的变量标记清除掉，表示这些变量是活跃的。</li>
+<li>之后被加上标记的变量代表是准备删除的变量</li>
+<li>执行内存清理，销毁这些变量回收内存</li>
+</ul>
+<p>但是标记清除也有局限性：</p>
+<ul>
+<li>由于从全局对象开始查找，那些无法从根对象查询到的变量都会被清除</li>
+<li>会造成空间碎片化(将被清除的不可达对象释放到空闲链表的时候，由于中间有可达对象，因此空间不连续)，无法空间最大化使用，可以使用标记整理或者标记压缩算法进行内存整理</li>
+<li>分配速度慢，由于空间碎片，需要对空闲链表遍历</li>
+</ul>
+<h3 id="标记整理"><a href="#标记整理" class="headerlink" title="标记整理"></a>标记整理</h3><p>标记整理可以看做对标记清除的增强，标记阶段一致，在清除阶段会先整理内存，移动对象位置，再清除，减少碎片化空间，但是缺点也是由于进行位置移动，回收效率慢。</p>
+<h3 id="引用计数"><a href="#引用计数" class="headerlink" title="引用计数"></a>引用计数</h3><p>对每个值记录引用的次数，当引用次数为0时，代表访问这个值，就会等待垃圾回收器回收。这种方式存在循环引用的问题无法清除的问题，所谓循环引用举个栗子就是对象A中包含一个指向对象B的指针，而对象B中也包含一个指向A的指针，那么就无法清除，造成内存泄露。</p>
+<h3 id="V8中的分代回收"><a href="#V8中的分代回收" class="headerlink" title="V8中的分代回收"></a>V8中的分代回收</h3><p>v8引擎中垃圾回收机制基于<code>分代回收机制</code>，其将堆内存分为新生代、老生代、大对象空间、代码空间等等；新生代存储存活时间较短的对象，老生代是存活时间较长或者常驻内存的对象。</p>
+<ul>
+<li><p>新生代占据堆较小的空间，垃圾回收频率较高，采用 复制算法+ 标记整理 回收， 基本就是 空间换时间</p>
+<ul>
+<li>新生代内存分配两个等大小空间，使用空间From 空闲空间 To</li>
+<li>活动（可达）对象存于From 中</li>
+<li>当From空间使用到一定程度时触发回收操作：<ul>
+<li>整理可达对象和不可达对象，将所有不可达对象整理成连续空间，将可达对象复制到To，同时检查可达对象是否符合晋升条件，符合进入老生代空间</li>
+<li>若无可达对象，直接清除</li>
+</ul>
+</li>
+<li><p>From 和 To交换，完成释放</p>
+<p>晋升</p>
+<p>晋升发生在从From 到 To的复制过程中</p>
+<p>晋升条件</p>
+</li>
+<li><p>一轮清理后还存活的新生代对象晋升</p>
+</li>
+<li>To空间使用超过25%，则全部晋升</li>
+</ul>
+</li>
+<li><p>老生代大多为新生代存活一段时间转移至此，主要采用标记清除、标记整理、增量标记等。由于空间较大，空间换时间会造成空间浪费。</p>
+<ul>
+<li>正常使用标记清除完成回收</li>
+<li>老生代空间不足时 触发标记整理</li>
+<li><p>增量标记进行效率优化</p>
+<p>  由于在垃圾回收时会停止应用逻辑，这种行为称为 全停顿 。因此将一段垃圾回收标记操作拆分成多个子标记操作，同时让垃圾回收标记和js应用逻辑交替进行，提高效率。</p>
+</li>
+</ul>
+</li>
+</ul>
+
       
-    </li></ul></div>
+    </div>
     
     
     
@@ -537,14 +431,38 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+          
+            <a href="/tags/垃圾回收/" rel="tag"><i class="fa fa-tag"></i> 垃圾回收</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/23/jQuery学习笔记/" rel="next" title="jQuery使用总结">
+                <i class="fa fa-chevron-left"></i> jQuery使用总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -554,10 +472,37 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -565,6 +510,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTQzMy83OTk3"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -585,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -691,6 +654,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#标记清除"><span class="nav-number">1.</span> <span class="nav-text">标记清除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记整理"><span class="nav-number">2.</span> <span class="nav-text">标记整理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用计数"><span class="nav-number">3.</span> <span class="nav-text">引用计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#V8中的分代回收"><span class="nav-number">4.</span> <span class="nav-text">V8中的分代回收</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -831,6 +810,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
@@ -859,6 +842,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
